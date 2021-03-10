@@ -1,0 +1,130 @@
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #303030;
+    background-image: url("Images/2021-01-21-15-15-38.gif");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+body{
+    backdrop-filter: blur(3px);
+    height: 98.4vh;
+    width: 99vw;
+}
+
+.headernav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 50px;
+
+}
+
+.title{
+    font-size: 36px;
+    font-weight: 500;
+    color: #DDD;
+    padding-left: 90px;
+}
+
+.title:hover{
+    color: #AAA;
+}
+
+.flag{
+    padding-right: 90px;
+    align-self: center;
+}
+
+main{
+    z-index: 100;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto 950px auto;
+    grid-template-rows:  8% auto 35% auto ;
+    gap: 15px;
+    width: 100%;
+    grid-template-areas:
+    ". . . " 
+    ". interdictionlogo ."
+    ". message ."
+    ". bouton .";
+}
+
+.interdictionlogo{ 
+    grid-area: interdictionlogo; 
+    margin-top: 5%;
+
+    justify-self: center;
+}
+
+.message{
+    grid-area: message;
+    font-size: 33px;
+    font-weight: 500;
+    color: #DDD;
+    text-align: center;
+    align-self: center;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.bouton { 
+    grid-area: bouton;     
+    justify-self: center;
+    align-self: center;
+
+}
+
+footer{
+    z-index: 10;
+}
+
+/* .footernav{
+    position: relative;
+    bottom: 0%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 800px;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . github linkedin helpB";
+      padding-top: 25px ;
+} */
+
+.bottomnav{
+    position: fixed;
+    right: 0%;
+    bottom: 3%;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "helpB"
+    "linkedin"
+    "github";
+}
+
+.github { 
+    grid-area: github; 
+    justify-self: center;
+    align-self: center;
+}
+
+.linkedin { 
+    grid-area: linkedin; 
+    justify-self: center;
+    align-self: center;
+}
+
+.help { 
+    grid-area: helpB; 
+    justify-self: center;
+    align-self: center;
+}
