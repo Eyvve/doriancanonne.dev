@@ -1,11 +1,10 @@
 html{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #303030;
-    background-image: url("Images/2021-01-21-15-15-38.gif");
+    background-color: #494949;
+    /* background-image: url("Images/2021-01-21-15-15-38.gif"); */
     background-repeat: repeat-y;
     background-size: 100%;
-    overflow: hidden;
-    
+    color: #DDD
 }
 
 hr{
@@ -27,7 +26,6 @@ p{
 }
 
 body{
-    backdrop-filter: blur(3px);
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -38,35 +36,55 @@ a{
     color: #DDD;
 }
 
+header{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+}
+
 .headernav{
     display: grid;
+    /* position: fixed; */
     width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
-    grid-template-columns: 91% 10%;
+    grid-template-columns: auto 9%;
     grid-template-rows: 0fr;
     grid-template-areas: "nav flag";
+
+    background-color: #303030;
 
 }
 
 .nav{
     grid-area: nav;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 400px auto auto;
     grid-template-rows: 1fr;
     grid-template-areas: "menup sec minisec";
+    padding-left: 90px;
+
 }
 
 .title{
-    display: inline-block;
     grid-area: menup;
     font-size: 36px;
     font-weight: 500;
     color: #DDD;
-    padding-left: 90px;
+}
+
+.sec{
+    grid-area: sec;
+    font-size: 36px;
+    font-weight: 500;
+    color: #DDD;
 }
 
 .title:hover{
+    color: #AAA;
+}
+
+.sec:hover{
     color: #AAA;
 }
 
@@ -80,62 +98,37 @@ main{
     z-index: 100;
 }
 
+.leftnav{
+    position: fixed;
+    display: grid;
+    left: 5%;
+    width: 120px;
+    height: auto;
+
+    background-color: #333;
+    border-radius: 15px;
+    border: 2px solid #555;
+    box-shadow: inset 0 0px 10px  #111;
+}
+
 .container{
+    margin-top: 150px;
     display: grid;
-    grid-template-columns: auto 950px auto;
-    grid-template-rows:  8% auto 35% auto ;
-    gap: 15px;
-    width: 100%;
-    grid-template-areas:
-    ". . . " 
-    ". interdictionlogo ."
-    ". message ."
-    ". bouton .";
+    grid-template-columns: auto 900px auto;
+    grid-template-rows: auto;
+    grid-template-areas: " . content . ";
 }
 
-.interdictionlogo{ 
-    grid-area: interdictionlogo; 
-    margin-top: 5%;
-    width: 300px;
-
-    justify-self: center;
+.content{
+    background-color: #333;
+    padding-bottom: 100px;
+    padding: 20px;
+    grid-area: content;
+    border: 2px solid #555;
+    border-radius: 15px;
+    box-shadow: inset 0 0px 10px  #111;
 }
 
-.message{
-    grid-area: message;
-    font-size: 33px;
-    font-weight: 500;
-    color: #DDD;
-    text-align: center;
-    align-self: center;
-}
-
-.yellow{
-    color: yellow;
-}
-
-.bouton { 
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-
-}
-
-footer{
-    z-index: 10;
-}
-
-/* .footernav{
-    position: relative;
-    bottom: 0%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 800px;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . . github linkedin helpB";
-      padding-top: 25px ;
-} */
 
 .bottomnav{
     position: fixed;
