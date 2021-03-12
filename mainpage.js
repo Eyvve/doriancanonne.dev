@@ -1,3 +1,19 @@
+var bouton_journal = document.querySelector("#bouton_journal")
+bouton_journal.addEventListener("mouseover", function(){
+    bouton_journal.src = "Images/boutonJournalHover.svg"
+})
+bouton_journal.addEventListener("mouseout", function(){
+    bouton_journal.src = "Images/boutonJournal.svg"
+})
+
+var bouton_realisations = document.querySelector("#bouton_realisations")
+bouton_realisations.addEventListener("mouseover", function(){
+    bouton_realisations.src = "Images/BoutonrealisationsHover.svg"
+})
+bouton_realisations.addEventListener("mouseout", function(){
+    bouton_realisations.src = "Images/Boutonrealisations.svg"
+})
+
 var help = document.querySelector("#help")
 help.addEventListener("mouseover", function() {
     var helptxt = document.getElementById("helptxt")

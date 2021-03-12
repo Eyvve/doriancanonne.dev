@@ -117,7 +117,7 @@ main{
     grid-area: bouton;     
     justify-self: center;
     align-self: center;
-    margin-right:300px;
+    margin-right:350px;
 
 }
 
@@ -125,7 +125,7 @@ main{
     grid-area: bouton;     
     justify-self: center;
     align-self: center;
-    margin-left:300px;
+    margin-left:350px;
 }
 
 footer{
