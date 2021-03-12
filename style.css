@@ -3,7 +3,7 @@ html{
     background-color: #DED9D4;
     background-repeat: repeat-y;
     background-size: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
@@ -113,11 +113,19 @@ main{
     color: #FF3366;
 }
 
-.bouton { 
+.bouton1 { 
     grid-area: bouton;     
     justify-self: center;
     align-self: center;
+    margin-right:300px;
 
+}
+
+.bouton2 { 
+    grid-area: bouton;     
+    justify-self: center;
+    align-self: center;
+    margin-left:300px;
 }
 
 footer{
