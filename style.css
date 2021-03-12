@@ -1,7 +1,6 @@
 html{
-    background-repeat: repeat-y;
-    background-size: 100%;
-    /* overflow: hidden; */
+    background-color: #DED9D4;
+    color: #2E4057;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
