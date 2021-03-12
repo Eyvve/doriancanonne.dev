@@ -3,7 +3,7 @@ help.addEventListener("mouseover", function() {
     var helptxt = document.getElementById("helptxt")
     console.log("checkin")
     helptxt.innerHTML = "À propos"
-    helptxt.style.color = "#FFFFFF"
+    helptxt.style.color = "#2E4057"
 })
 help.addEventListener("mouseout", function() {
     var helptxt = document.getElementById("helptxt")
@@ -18,7 +18,7 @@ linkedin.addEventListener("mouseover", function() {
     var linkedintxt = document.getElementById("linkedintxt")
     console.log("checkin")
     linkedintxt.innerHTML = "linkedin"
-    linkedintxt.style.color = "#FFFFFF"
+    linkedintxt.style.color = "#2E4057"
 })
 linkedin.addEventListener("mouseout", function() {
     var linkedintxt = document.getElementById("linkedintxt")
@@ -33,7 +33,7 @@ github.addEventListener("mouseover", function() {
     var githubtxt = document.getElementById("githubtxt")
     console.log("checkin")
     githubtxt.innerHTML = "Github"
-    githubtxt.style.color = "#FFFFFF"
+    githubtxt.style.color = "#2E4057"
 })
 github.addEventListener("mouseout", function() {
     var githubtxt = document.getElementById("githubtxt")
