@@ -102,13 +102,11 @@ main{
     position: fixed;
     display: grid;
     left: 5%;
-    width: 120px;
+    width: 250px;
     height: auto;
 
     background-color: #333;
-    border-radius: 15px;
     border: 2px solid #555;
-    box-shadow: inset 0 0px 10px  #111;
 }
 
 .container{
@@ -116,13 +114,19 @@ main{
     display: grid;
     grid-template-columns: auto 900px auto;
     grid-template-rows: auto;
-    grid-template-areas: " . content . ";
+    grid-template-areas: " leftspace content . ";
+}
+
+.leftspace{
+    min-width: 250px;
+    grid-area: leftspace;
+    border: 1px solid black;
 }
 
 .content{
     background-color: #333;
     padding-bottom: 100px;
-    padding: 20px;
+    padding: 30px;
     grid-area: content;
     border: 2px solid #555;
     border-radius: 15px;
