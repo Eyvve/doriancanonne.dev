@@ -1,6 +1,7 @@
 html{
     background-color: #DED9D4;
     color: #2E4057;
+    overflow: hidden;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
