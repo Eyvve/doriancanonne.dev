@@ -145,10 +145,11 @@ footer{
 
 .bottomnav{
     z-index: 10000;
-    position: fixed;
-    right: 110px;
+    position: sticky;
+    position: -webkit-sticky;
     bottom: 60px;
-    width: 60px;
+    right: 70px;
+    float: right;
     gap: 15px;
     display: grid;
     grid-template-columns: 2fr 1fr;
