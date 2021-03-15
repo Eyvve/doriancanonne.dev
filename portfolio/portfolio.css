@@ -1,8 +1,8 @@
 html{
     background-color: #DED9D4;
     color: #2E4057;
-    overflow: hidden;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    overflow: hidden;
 }
 
 hr{
@@ -82,69 +82,108 @@ main{
 
 .container{
     display: grid;
-    grid-template-columns: auto 950px auto;
-    grid-template-rows: 40% 35% auto ;
-    gap: 15px;
-    width: 100%;
+    height: 90%;
+    grid-template-columns: auto 40px 900px 40px auto;
+    grid-template-rows: 120px 40% 3% 20% 15% auto 80px;
+    gap: 0px 0px;
     grid-template-areas:
-    ". interdictionlogo ."
-    ". message ."
-    ". bouton .";
+        "timeline timeline timeline timeline timeline"
+        ". . ProjectImage . ."
+        ". . . . ."
+        ". leftarrow projectname rightarrow ."
+        ". . projectlanguages . ."
+        ". . Buttons . ."
+        ". . . . .";
 }
 
-.workinprogresslogo{ 
-    grid-area: interdictionlogo;
-    z-index: 5;
-    width: 900px;
+.timeline { 
+    grid-area: timeline; 
+}
+
+.timelineindicator{
+    display: flex;
     position: relative;
-    top: -100px;
+    left: 100px;
+    font-size: 17px;
+    flex-direction: column;
+    width: 120px;
+}
+
+.date{
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+}
+
+.pointer{
+    position: relative;
+    top: 5px;
+    width: 23px;
+    height: 17px;
+    align-self: center;
+}
+
+.line{
+    width: 100%;
+}
+
+.ProjectImage { 
+    grid-area: ProjectImage; 
+    width: 650px;
     justify-self: center;
 }
 
-.message{
-    z-index: 100;
-    grid-area: message;
-    font-size: 27px;
-    font-weight: 400;
-    color: #2E4057;
-    text-align: center;
+.leftarrow { 
+    grid-area: leftarrow;
+    align-self: center; 
+}
+
+.rightarrow { 
+    grid-area: rightarrow; 
+    align-self: center; 
+}
+
+.projectname { 
+    grid-area: projectname;
     align-self: center;
+    font-size: 45px;
+    text-align: center;
+    line-height: 3em;
+}
+
+.projectlanguages { 
+    grid-area: projectlanguages; 
+    justify-self: center;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "leftbutton rightbutton";
+  grid-area: Buttons;
+}
+
+.leftbutton { 
+    grid-area: leftbutton; 
+    justify-self: center;
+}
+
+.rightbutton { 
+    grid-area: rightbutton; 
+    justify-self: center;
 }
 
 .red{
     color: #FF3366;
 }
 
-.bouton1 { 
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-    margin-right:350px;
-
-}
-
-.bouton2 { 
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-    margin-left:350px;
-}
 
 footer{
-    z-index: 10;
+    z-index: 100000;
 }
-
-/* .footernav{
-    position: relative;
-    bottom: 0%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 800px;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . . github linkedin helpB";
-      padding-top: 25px ;
-} */
 
 .bottomnav{
     z-index: 10000;

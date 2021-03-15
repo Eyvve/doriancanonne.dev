@@ -35,27 +35,23 @@ a{
 }
 
 .headernav{
-    display: grid;
     width: 100%;
     padding-top: 35px;
     padding-bottom: 35px;
-    grid-template-columns: 91% 10%;
-    grid-template-rows: 0fr;
-    grid-template-areas: "nav flag";
 
 }
 
 .nav{
-    grid-area: nav;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
-    grid-template-areas: "menup sec minisec";
+    grid-template-columns: 200px;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: " menup " " submenu1 ";
 }
 
 .title{
     display: inline-block;
     grid-area: menup;
+    width: 200px;
     font-size: 21px;
     font-weight: 500;
     color: #2E4057;
@@ -64,6 +60,13 @@ a{
 
 .title:hover{
     color: #AAA;
+}
+
+.submenu1{
+    grid-area: submenu1;
+    font-size: 18px;
+    margin-left: 80px;
+    line-height: 1.8em;
 }
 
 .flag{
