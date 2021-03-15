@@ -55,6 +55,7 @@ a{
 
 .title{
     display: inline-block;
+    z-index: 1000;
     grid-area: menup;
     font-size: 21px;
     font-weight: 500;
@@ -79,7 +80,7 @@ main{
 .container{
     display: grid;
     grid-template-columns: auto 950px auto;
-    grid-template-rows: 400px 35% auto ;
+    grid-template-rows: 40% 35% auto ;
     gap: 15px;
     width: 100%;
     grid-template-areas:
@@ -90,6 +91,7 @@ main{
 
 .workinprogresslogo{ 
     grid-area: interdictionlogo;
+    z-index: 5;
     width: 900px;
     position: relative;
     top: -100px;
@@ -142,9 +144,10 @@ footer{
 } */
 
 .bottomnav{
+    z-index: 10000;
     position: fixed;
     right: 110px;
-    top: 80%;
+    bottom: 60px;
     width: 60px;
     gap: 15px;
     display: grid;
@@ -156,11 +159,11 @@ footer{
     "detailgit github";
 }
 
-.github { 
-    grid-area: github; 
+.help { 
+    grid-area: helpB; 
     justify-self: center;
     align-self: center;
-    
+
 }
 
 .linkedin { 
@@ -169,20 +172,21 @@ footer{
     align-self: center;
 }
 
-.help { 
-    grid-area: helpB; 
+.github { 
+    grid-area: github; 
     justify-self: center;
     align-self: center;
-
+    
 }
 
-.githubtxt { 
-    grid-area: detailgit; 
+.helptxt { 
+    grid-area: detailhelp; 
     justify-self: center;
     align-self: center;
     width: 85px;
     height: 33px;
     /* display: none; */
+
 }
 
 .linkedintxt { 
@@ -194,14 +198,13 @@ footer{
     /* display: none; */
 }
 
-.helptxt { 
-    grid-area: detailhelp; 
+.githubtxt { 
+    grid-area: detailgit; 
     justify-self: center;
     align-self: center;
     width: 85px;
     height: 33px;
     /* display: none; */
-
 }
 
 .icon{
