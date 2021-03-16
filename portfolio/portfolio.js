@@ -96,9 +96,13 @@ var clicker1 = false
 var clicker2 = false
 var clicker3 = false
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+rightarrow.addEventListener("mouseover", function(){
+    rightarrow.src = "../Images/right_arrow_hover.png"
+})
+
+rightarrow.addEventListener("mouseout", function(){
+    rightarrow.src = "../Images/right_arrow.svg"
+})
 
 rightarrow.addEventListener("click", function(){
     console.log("go right")
@@ -149,6 +153,14 @@ rightarrow.addEventListener("click", function(){
         ProjectImage.style.filter = "blur(0px)"
     }
     console.log(position)
+})
+
+leftarrow.addEventListener("mouseover", function(){
+    leftarrow.src = "../Images/left_arrow_hover.png"
+})
+
+leftarrow.addEventListener("mouseout", function(){
+    leftarrow.src = "../Images/left_arrow.svg"
 })
 
 leftarrow.addEventListener("click", function(){
