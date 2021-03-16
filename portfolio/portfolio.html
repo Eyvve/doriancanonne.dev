@@ -4,46 +4,83 @@
     <meta charset="UTF-8">
     <title>dc.dev| Réalisations</title>
     <link rel="stylesheet" href="portfolio.css">
-    <link rel="icon" type="image/png" href="/Images/logo.png">
+    <link rel="icon" type="image/png" href="../Images/logo.png">
 </head>
 <body>
     <header>
         <nav class="headernav">
-            <a href="/index.html"><div class="title">DORIANCANONNE.DEV</div></a>
+            <a href="../index.html"><div class="title">DORIANCANONNE.DEV</div></a>
             <div class="submenu1"> > Réalisations</div>
             <!-- <img class="flag" src="Images/frenchflag.png" alt="French language"> -->
         </nav>
     </header>
 
     <main>
-        <div class="container">
+        <section class="container">
             <div class="timeline">
                 <div class="timelineindicator" id="timelineindicator">
                     <div class="date" id="date">Janvier 2021</div>
-                    <img class="pointer" id="pointer" src="/Images/timeline_pointer.svg">
+                    <img class="pointer" id="pointer" src="../Images/timeline_pointer.svg">
                 </div>
-                <img class="line" src="/Images/timeline_line.svg" alt="">
+                <img class="line" src="../Images/timeline_line.svg" alt="">
             </div>
-            <img class="ProjectImage" src="/Images/prince_demon_png.png"></img>
-            <img class="leftarrow" src="/Images/left_arrow.svg"></img>
-            <img class="rightarrow" src="/Images/right_arrow.svg"></img>
-            <div class="projectname">Le Prince Démon</div>
-            <img class="projectlanguages" src="/Images/prince_demon_language.svg"></img>
+            <img id="ProjectImage" class="ProjectImage" src="../Images/imagegroup.png"></img>
+            <img id="leftarrow" class="leftarrow" src="../Images/left_arrow.svg"></img>
+            <img id="rightarrow" class="rightarrow" src="../Images/right_arrow.svg"></img>
+            <div id="projectname" class="projectname">Le Prince Démon (démo)</div>
+            <img id="projectlanguages" class="projectlanguages" src="../Images/prince_demon_language.svg"></img>
             <div class="Buttons">
-                <img class="leftbutton" src="/Images/Play_button.svg"></img>
-                <img class="rightbutton" src="/Images/Description_button.svg"></img>
+                <a class="leftbutton" id="leftbuttonlink" href="#anchordescription"><img id="leftbutton" src="../Images/Description_button.svg"></img></a>
+                <a id="rightbuttonlink" class="rightbutton" href="https://github.com/Eyvve/Le-prince-demon-DEMO/releases/tag/DEMO-1.4" target="_blank"><img id="rightbutton" src="../Images/Play_button.svg"></img></a>
             </div>
-        </div>
-        <div class="bottomnav">
-            <a id="help" class="help" href="/Diary/Apropos.html"><img class="icon" src="../Images/question.svg" alt="help button"></img></a>
-            <a  id="linkedin"class="linkedin" href="https://www.linkedin.com/in/dorian-canonne/" target="_blank"><img class="icon" src="../Images/linkedin.svg" alt="linkedin button"></img></a>
-            <a id="github" class="github" href="https://github.com/Eyvve" target="_blank"><img class="icon" src="../Images/mark-github-24.svg" alt="github button"></img></a>
+        </section>
+        <div id="anchordescription"></div>
+        <section class="description" id="#description">
+            <a class="retour" href="#top"><img class="retourimg" id="return" src="../Images/retour.svg"></img></a>
+            <img id="description_logo" class="description_logo" src="../Images/prince_demon_white_png.png"></img>
+            <div id="description_txt1" class="description_txt">
+                Le prince démon est un jeu textuel crée en collaboration avec Gabriel Goldbronn (chargé de toutes les données du jeu) et Argan Delaire (lore et worldbuilding) dans le cadre d'un projet Python à HETIC. 
+                C'est un jeu entièrement réalisé en python avec comme seul usage de bibliothèque une gestion du son grâce à Pygame.<br><br>
+                Le jeu vous transporte dans le monde de Ljosalfer où vous jouez d'une part le prince démon pour le tutoriel et d'une autre son père, le dieu roi.<br>
+                C'est un RPG scripté au tour par tour incluant des mécaniques de magie et de coups spéciaux modifiant les caractéristiques de l'ennemi.<br><br>
+                Dans ce projet j'ai entièrement réalisé le système de combat, l'ergonomie, la narration et le visuel. Les musiques ne m'appartenant pas, elle sont toutes créditées.
+                <br><br>
+            </div>
+            <div id="description_txt2" class="description_txt">
+                Hetic Mini Games est un site de divertissement crée en deux semaines dans le cadre d'un projet intensif front-end à HETIC. <br>
+                Ce site à été réalisé en collaboration avec Amin Bentani, Julie Cesana, Gabriel Goldbronn, Thomas Latour et Amira Rechid.<br><br>
+                C'est un site s'inspirant de la direction artistique de l'école, contenant quatre jeux développés en javascript natif. On y a intégré un système de monnaie gagnable en jouant, servant à acheter des avatars.<br><br>
+                Lors de ce projet j'ai joué le rôle de chef de projet, coordinant toute l'équipe pour atteindre nos objectifs en peu de temps. J'ai aussi réalisé deux jeux : Le Pixel-drawer et le puissance4.<br>
+                Concernant le site en lui-même, j'ai écrit une grande partie du code HTML / CSS du site et coordiné l'équipe correspondante.
+            </div>
+            <div id="description_txt3" class="description_txt">
+                Magical Mystery Page est un projet en cours de développement, mon second projet personnel après ce site. <br>
+                C'est une page hommage à l'album Magical Mystery Tour des Beatles. <br><br>
+                Ce projet personnel à pour but de m'entrainer à deux pratiques : <br>
+                - L'utilisation du framework Angular,<br>
+                - Faire des animations CSS au scroll et m'entrainer à la parallaxe.<br><br>
+                Il y aura donc une animation par musique, sur chaque thèmes respectifs. Vous pourrez suivre le développement de ce projet à travers mon premier DevLog dédié à la confection du site.<br><br>
+                La mise en ligne de ce site est prévue pour Avril 2021
+            </div>
+            <div class="description-images">
+                <img src="../Images/LPD_S1.png" alt="" id="img1" class="imgdesc">
+                <img src="../Images/LPD_S2.png" alt="" id="img2" class="imgdesc">
+                <img src="../Images/LPD_S3.png" alt="" id="img3" class="imgdesc">
+            </div>
+        </section>
+        <nav class="bottomnav">
+            <a id="help" class="help" href="../Diary/Apropos.html"><img id="helpicon" class="icon" src="../Images/question.svg" alt="help button"></img></a>
+            <a  id="linkedin"class="linkedin" href="https://www.linkedin.com/in/dorian-canonne/" target="_blank"><img id="linkedinicon" class="icon" src="../Images/linkedin.svg" alt="linkedin button"></img></a>
+            <a id="github" class="github" href="https://github.com/Eyvve" target="_blank"><img id="githubicon" class="icon" src="../Images/mark-github-24.svg" alt="github button"></img></a>
             
             <div id="helptxt" class="helptxt"></div>
             <div id="linkedintxt" class="linkedintxt"></div>
             <div id="githubtxt" class="githubtxt"></div>
-        </div>
+        </nav>
     </main>
+    <footer>
+
+    </footer>
 
     
 </body>

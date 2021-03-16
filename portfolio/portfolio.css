@@ -2,7 +2,10 @@ html{
     background-color: #DED9D4;
     color: #2E4057;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    height: 200%;
 }
 
 hr{
@@ -25,14 +28,21 @@ p{
 
 body{
     backdrop-filter: blur(3px);
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin: 0;
+    float: inline-start;
 }
 
 a{
     text-decoration:none;
     color: #DDD;
+}
+
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
 }
 
 .headernav{
@@ -82,9 +92,9 @@ main{
 
 .container{
     display: grid;
-    height: 90%;
+    height: 100vh;
     grid-template-columns: auto 40px 900px 40px auto;
-    grid-template-rows: 120px 40% 3% 20% 15% auto 80px;
+    grid-template-rows: 14% 23% 3% 13% 12% auto 80px;
     gap: 0px 0px;
     grid-template-areas:
         "timeline timeline timeline timeline timeline"
@@ -103,10 +113,38 @@ main{
 .timelineindicator{
     display: flex;
     position: relative;
-    left: 100px;
+    
     font-size: 17px;
     flex-direction: column;
     width: 120px;
+    left: 100px;
+}
+
+.horizTranslate0 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 100px ;
+  }
+
+.horizTranslate1 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 150px ;
+  }
+
+.horizTranslate2 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 200px ;
 }
 
 .date{
@@ -129,8 +167,43 @@ main{
 
 .ProjectImage { 
     grid-area: ProjectImage; 
-    width: 650px;
+    position: relative;
+    top: 5%;
+    left: 1585px ;
+    /* left: 0px ; */
+    /* left: -1590px ; */
+    height: 235.25px;
     justify-self: center;
+}
+
+.slide0{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 1585px ;
+    filter: blur(1px);
+}
+
+.slide1{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 0px ;
+    filter: blur(1px);
+}
+
+.slide2{
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: -1590px ;
+    filter: blur(1px);
 }
 
 .leftarrow { 
@@ -180,10 +253,88 @@ main{
     color: #FF3366;
 }
 
-
-footer{
-    z-index: 100000;
+.description{
+    position: relative;
+    display: grid;
+    top: 128.75px;
+    height: 87vh;
+    width: 100%;
+    background-color: #2E4057;
+    grid-template-columns: auto 1000px auto;
+    grid-template-rows: 80px 24% 35% 25% auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". retour ."
+        ". description_logo ."
+        ". description_txt ."
+        "description-images description-images description-images"
+        ". . .";
 }
+
+.retour{
+    grid-area: retour; 
+    justify-self: center;
+    margin-top: 15px;
+    
+}
+
+.retourimg{
+    width: 150px;
+    text-align: center;
+}
+
+.description_logo { 
+    grid-area: description_logo; 
+    height: 150px;
+    justify-self: center;
+}
+.description_txt { 
+    grid-area: description_txt; 
+    color: #DED9D4;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#description_txt1{
+    display: block;
+}
+
+#description_txt2{
+    display: none;
+}
+
+#description_txt3{
+    display: none;
+}
+
+.displaynone{
+    display: none;
+}
+
+.displayblock{
+    display: block;
+}
+
+.description-images { 
+    grid-area: description-images; 
+    display: flex;
+    justify-content: center;
+}
+
+.imgdesc{
+    height: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.imgdesctransition{
+    position: absolute;
+    bottom: 0px;
+    width: auto;
+    margin: 0 auto;
+    height: 100%;
+}
+
 
 .bottomnav{
     z-index: 10000;
@@ -226,8 +377,10 @@ footer{
     grid-area: detailhelp; 
     justify-self: center;
     align-self: center;
+    z-index: 200000;
     width: 85px;
     height: 33px;
+    color: #2E4057;
     /* display: none; */
 
 }
@@ -236,8 +389,10 @@ footer{
     grid-area: detaillink; 
     justify-self: center;
     align-self: center;
+    z-index: 200000;
     width: 85px;
     height: 33px;
+    color: #2E4057;
     /* display: none; */
 }
 
@@ -245,12 +400,18 @@ footer{
     grid-area: detailgit; 
     justify-self: center;
     align-self: center;
+    z-index: 200000;
     width: 85px;
     height: 33px;
+    color: #2E4057;
     /* display: none; */
 }
 
 .icon{
     height: 33px;
     width: 33px;
+}
+
+footer{
+    height: 0px;
 }

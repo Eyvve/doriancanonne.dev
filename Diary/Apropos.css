@@ -34,6 +34,12 @@ a{
     color: #DDD;
 }
 
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
 .headernav{
     width: 100%;
     padding-top: 35px;
