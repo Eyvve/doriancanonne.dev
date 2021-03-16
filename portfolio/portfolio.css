@@ -329,6 +329,11 @@ main{
 
 .imgdesctransition{
     position: absolute;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
     bottom: 0px;
     width: auto;
     margin: 0 auto;
