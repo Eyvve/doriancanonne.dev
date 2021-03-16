@@ -280,7 +280,7 @@ leftbutton.addEventListener("click", function(){
         img2.src = ""
         img3.src = ""
     }
-    setTimeout(() => {  window.location.href = "#anchordescription"; }, 500);
+    setTimeout(() => {  window.location.href = "#anchordescription"; }, 400);
     
     
 })
