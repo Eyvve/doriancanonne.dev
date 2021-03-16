@@ -96,6 +96,7 @@ main{
     grid-template-columns: auto 40px 900px 40px auto;
     grid-template-rows: 14% 23% 3% 13% 12% auto 80px;
     gap: 0px 0px;
+    overflow: hidden;
     grid-template-areas:
         "timeline timeline timeline timeline timeline"
         ". . ProjectImage . ."
@@ -170,10 +171,9 @@ main{
     position: relative;
     top: 5%;
     left: 1585px ;
-    /* left: 0px ; */
-    /* left: -1590px ; */
     height: 235.25px;
     justify-self: center;
+    overflow: hidden;
 }
 
 .slide0{
