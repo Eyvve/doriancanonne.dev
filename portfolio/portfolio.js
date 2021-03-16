@@ -263,7 +263,7 @@ leftbutton.addEventListener("click", function(){
         img3.src = "../Images/LPD_S3.png"
     }
     if(position == 1){
-        description_logo.src = "../Images/HMG_svg.svg"
+        description_logo.src = "../Images/HMG_png.png"
         description_txt1.style.display = "none"
         description_txt2.style.display = "block"
         description_txt3.style.display = "none"
