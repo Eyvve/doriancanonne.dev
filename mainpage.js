@@ -14,7 +14,7 @@ bouton_realisations.addEventListener("mouseout", function(){
     bouton_realisations.src = "Images/Boutonrealisations.svg"
 })
 
-var bouton_realisations = document.querySelector("#bouton_cv")
+var cv = document.querySelector("#bouton_cv")
 bouton_cv.addEventListener("mouseover", function(){
     bouton_cv.src = "Images/Boutoncvhover.svg"
 })
