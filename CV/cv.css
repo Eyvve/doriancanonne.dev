@@ -1,295 +1,609 @@
-html{
-    background: rgb(222,217,212);
-    background: linear-gradient(180deg, rgba(222,217,212,1) 84%, rgba(46,64,87,1) 85%, rgba(46,64,87,1) 100%);
-    color: #2E4057;
-    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-    overflow-x: hidden;
-    overflow-y: hidden; 
-    scroll-behavior: smooth;
-}
 
-hr{
-    width: 80%;
-}
-
-h1{
-    font-size: 45px;
-}
-
-p{
-    color: #2E4057;
-    font-size: 20px;
-    line-height: 1.4em;
-}
-
-.center{
-    text-align: center;
-}
-
-body{
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-}
-
-a{
-    text-decoration:none;
-    color: #DDD;
-}
-
-header{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-}
-
-.headernav{
-    width: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
-
-}
-
-.nav{
-    display: grid;
-    grid-template-columns: 200px;
-    grid-template-rows: 1fr 0.5fr;
-    grid-template-areas: " menup " " submenu1 ";
-}
-
-.title{
-    display: inline-block;
-    grid-area: menup;
-    width: 200px;
-    font-size: 21px;
-    font-weight: 500;
-    color: #2E4057;
-    padding-left: 70px;
-}
-
-.title:hover{
-    color: #AAA;
-}
-
-.submenu1{
-    grid-area: submenu1;
-    font-size: 18px;
-    margin-left: 80px;
-    line-height: 1.8em;
-}
-
-.flag{
-    padding-right: 90px;
-    align-self: center;
-    grid-area: flag;
-}
-
-main{
-    z-index: 100;
-}
-
-.container{
-    display: grid;
-    position: relative;
-    max-height: 87vh;
-    overflow: hidden;
-    width: 100%;
-    bottom: 0px;
-    background-image: url(../Images/sky.svg);
-    background-position: bottom;
-    background-size: cover;
-}
-
-.mapslider{
-    position: relative;
-    bottom: 0px;
-    height: 87vh;
-    left: 0px;
-}
-
-.avatar{
-    position : absolute;
-    top: 47vh;
-    height: 150px;
-    left: 30vh;
-}
-
-.Translate0 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: 0px ;
-}
-
-.Translate1 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -710px ;
-}
-
-.Translate2 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -1300px ;
-}
-
-.Translate3 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -1800px ;
-}
-
-.Translate4 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -2550px ;
-}
-
-.Translate5 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -2850px ;
-}
-
-.Translate6 {
-    -webkit-transition: 3s;
-    -moz-transition: 3s;
-    -ms-transition: 3s;
-    -o-transition: 3s;
-    transition: 3s;
-    left: -3300px ;
-}
-
-.date{
-    position: relative;
-    z-index: 30000;
-    display: grid;
-    grid-template-columns: 50px 150px 50px ;
-    grid-template-rows: 1fr ;
-    grid-template-areas: "leftbutton date rightbutton";
-    height: 100px;
-    top: -12vh;
-    left: 72vh;
-}
-
-.datetxt{
-    font-size: 30px;
-    grid-area: date ; 
-    color: #DED9D4;
-    justify-self: center;
-}
-
-.leftbutton{
-    grid-area: leftbutton ;
-}
-
-.rightbutton{
-    grid-area: rightbutton ;
-}
-
-.bulle{
-    position: relative;
-    top: -90vh;
-    left: 45vw;
-    width: 700px;
-    height: 500px;
-    background-color: rgba(46, 64, 87, 0.90);
-    color: #DED9D4;
-}
-
-.txt{
-    padding: 40px;
-    font-size: 21px;
-}
-
-.txt0{
-    display: block;
-}
-
-.txt1{
-    display: none;
-}
-
-.txt2{
-    display: none;
-}
-
-.txt3{
-    display: none;
-    font-size: 18px;
-}
-
-.txt4{
-    display: none;
-}
-
-.txt5{
-    display: none;
-    font-size: 19px;
-}
-
-.txt6{
-    display: none;
-}
-
-
-.bottomnav{
-    z-index: 10000;
-    position: absolute;
-    position: -webkit-sticky;
-    top: 92%;
-    right: 40px;
-    float: right;
-    gap: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "helpB linkedin github";
-}
-
-.help { 
-    grid-area: helpB; 
-    justify-self: center;
-    align-self: center;
-
-}
-
-.linkedin { 
-    grid-area: linkedin; 
-    justify-self: center;
-    align-self: center;
-}
-
-.github { 
-    grid-area: github; 
-    justify-self: center;
-    align-self: center;
+@media(max-resolution: 100dpi) and (max-width: 2000px ){
+    html{
+        background: rgb(222,217,212);
+        background: linear-gradient(180deg, rgba(222,217,212,1) 84%, rgba(46,64,87,1) 85%, rgba(46,64,87,1) 100%);
+        color: #2E4057;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        overflow-x: hidden;
+        overflow-y: hidden; 
+        scroll-behavior: smooth;
+    }
     
+    hr{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 45px;
+    }
+    
+    p{
+        color: #2E4057;
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    body{
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+    
+    a{
+        text-decoration:none;
+        color: #DDD;
+    }
+    
+    header{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+    }
+    
+    .headernav{
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    
+    }
+    
+    .nav{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: " menup " " submenu1 ";
+    }
+    
+    .title{
+        display: inline-block;
+        grid-area: menup;
+        width: 200px;
+        font-size: 21px;
+        font-weight: 500;
+        color: #2E4057;
+        padding-left: 70px;
+    }
+    
+    .title:hover{
+        color: #AAA;
+    }
+    
+    .submenu1{
+        grid-area: submenu1;
+        font-size: 18px;
+        margin-left: 80px;
+        line-height: 1.8em;
+    }
+    
+    .flag{
+        padding-right: 90px;
+        align-self: center;
+        grid-area: flag;
+    }
+    
+    main{
+        z-index: 100;
+    }
+    
+    .container{
+        display: grid;
+        position: relative;
+        max-height: 87vh;
+        overflow: hidden;
+        width: 100%;
+        bottom: 0px;
+        background-image: url(../Images/sky.svg);
+        background-position: bottom;
+        background-size: cover;
+    }
+    
+    .mapslider{
+        position: relative;
+        bottom: 0px;
+        height: 87vh;
+        left: 0px;
+    }
+    
+    .avatar{
+        position : absolute;
+        top: 47vh;
+        height: 150px;
+        left: 30vh;
+    }
+    
+    .Translate0 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .Translate1 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -710px ;
+    }
+    
+    .Translate2 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1300px ;
+    }
+    
+    .Translate3 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1800px ;
+    }
+    
+    .Translate4 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2550px ;
+    }
+    
+    .Translate5 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2850px ;
+    }
+    
+    .Translate6 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -3300px ;
+    }
+    
+    .date{
+        position: relative;
+        z-index: 30000;
+        display: grid;
+        grid-template-columns: 50px 150px 50px ;
+        grid-template-rows: 1fr ;
+        grid-template-areas: "leftbutton date rightbutton";
+        height: 100px;
+        top: -12vh;
+        left: 72vh;
+    }
+    
+    .datetxt{
+        font-size: 30px;
+        grid-area: date ; 
+        color: #DED9D4;
+        justify-self: center;
+    }
+    
+    .leftbutton{
+        grid-area: leftbutton ;
+    }
+    
+    .rightbutton{
+        grid-area: rightbutton ;
+    }
+    
+    .bulle{
+        position: relative;
+        top: -90vh;
+        left: 45vw;
+        width: 700px;
+        height: 500px;
+        background-color: rgba(46, 64, 87, 0.90);
+        color: #DED9D4;
+    }
+    
+    .txt{
+        padding: 40px;
+        font-size: 21px;
+    }
+    
+    .txt0{
+        display: block;
+    }
+    
+    .txt1{
+        display: none;
+    }
+    
+    .txt2{
+        display: none;
+    }
+    
+    .txt3{
+        display: none;
+        font-size: 18px;
+    }
+    
+    .txt4{
+        display: none;
+    }
+    
+    .txt5{
+        display: none;
+        font-size: 19px;
+    }
+    
+    .txt6{
+        display: none;
+    }
+    
+    
+    .bottomnav{
+        z-index: 10000;
+        position: absolute;
+        position: -webkit-sticky;
+        top: 92%;
+        right: 40px;
+        float: right;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "helpB linkedin github";
+    }
+    
+    .help { 
+        grid-area: helpB; 
+        justify-self: center;
+        align-self: center;
+    
+    }
+    
+    .linkedin { 
+        grid-area: linkedin; 
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .github { 
+        grid-area: github; 
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .icon{
+        height: 33px;
+        width: 33px;
+    }
+    
+    footer{
+        height: 0px;
+    }
 }
 
-.icon{
-    height: 33px;
-    width: 33px;
-}
 
-footer{
-    height: 0px;
+
+@media(min-resolution: 100dpi){
+    html{
+        background: rgb(222,217,212);
+        background: linear-gradient(180deg, rgba(222,217,212,1) 84%, rgba(46,64,87,1) 85%, rgba(46,64,87,1) 100%);
+        color: #2E4057;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+        overflow-x: hidden;
+        overflow-y: hidden; 
+        scroll-behavior: smooth;
+    }
+    
+    hr{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 45px;
+    }
+    
+    p{
+        color: #2E4057;
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    body{
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+    
+    a{
+        text-decoration:none;
+        color: #DDD;
+    }
+    
+    header{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0px;
+    }
+    
+    .headernav{
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    
+    }
+    
+    .nav{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: " menup " " submenu1 ";
+    }
+    
+    .title{
+        display: inline-block;
+        grid-area: menup;
+        width: 200px;
+        font-size: 21px;
+        font-weight: 500;
+        color: #2E4057;
+        padding-left: 70px;
+    }
+    
+    .title:hover{
+        color: #AAA;
+    }
+    
+    .submenu1{
+        grid-area: submenu1;
+        font-size: 18px;
+        margin-left: 80px;
+        line-height: 1.8em;
+    }
+    
+    .flag{
+        padding-right: 90px;
+        align-self: center;
+        grid-area: flag;
+    }
+    
+    main{
+        z-index: 100;
+    }
+    
+    .container{
+        display: grid;
+        position: relative;
+        max-height: 87vh;
+        overflow: hidden;
+        width: 100%;
+        bottom: 0px;
+        background-image: url(../Images/sky.svg);
+        background-position: bottom;
+        background-size: cover;
+    }
+    
+    .mapslider{
+        position: relative;
+        bottom: 0px;
+        height: 87vh;
+        left: 0px;
+    }
+    
+    .avatar{
+        /* MODIFIE */
+        position : absolute;
+        top: 43.5vh;
+        height: 150px;
+        left: 30vh;
+    }
+    
+    .Translate0 {
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .Translate1 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -550px ;
+    }
+    
+    .Translate2 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1000px ;
+    }
+    
+    .Translate3 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1400px ;
+    }
+    
+    .Translate4 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2010px ;
+    }
+    
+    .Translate5 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2250px ;
+    }
+    
+    .Translate6 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2500px ;
+    }
+    
+    .date{
+        /* MODIFIE */
+        position: relative;
+        z-index: 30000;
+        display: grid;
+        grid-template-columns: 50px 150px 50px ;
+        grid-template-rows: 1fr ;
+        grid-template-areas: "leftbutton date rightbutton";
+        height: 100px;
+        top: -17vh;
+        left: 72vh;
+    }
+    
+    .datetxt{
+        font-size: 30px;
+        grid-area: date ; 
+        color: #DED9D4;
+        justify-self: center;
+    }
+    
+    .leftbutton{
+        grid-area: leftbutton ;
+    }
+    
+    .rightbutton{
+        grid-area: rightbutton ;
+    }
+    
+    .bulle{
+        /* MODIFIE */
+        position: relative;
+        top: -90vh;
+        left: 45vw;
+        width: 600px;
+        height: 460px;
+        background-color: rgba(46, 64, 87, 0.90);
+        color: #DED9D4;
+    }
+    
+    .txt{
+        /* MODIFIE */
+        padding: 40px;
+        font-size: 20px;
+    }
+    
+    .txt0{
+        display: block;
+    }
+    
+    .txt1{
+        display: none;
+    }
+    
+    .txt2{
+        display: none;
+    }
+    
+    .txt3{
+        /* MODIFIE */
+        display: none;
+        font-size: 16px;
+    }
+    
+    .txt4{
+        display: none;
+    }
+    
+    .txt5{
+        display: none;
+        font-size: 16px;
+    }
+    
+    .txt6{
+        display: none;
+    }
+    
+    
+    .bottomnav{
+        z-index: 10000;
+        position: absolute;
+        position: -webkit-sticky;
+        top: 92%;
+        right: 40px;
+        float: right;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "helpB linkedin github";
+    }
+    
+    .help { 
+        grid-area: helpB; 
+        justify-self: center;
+        align-self: center;
+    
+    }
+    
+    .linkedin { 
+        grid-area: linkedin; 
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .github { 
+        grid-area: github; 
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .icon{
+        height: 33px;
+        width: 33px;
+    }
+    
+    footer{
+        height: 0px;
+    }
 }

@@ -1,217 +1,459 @@
-html{
-    background-color: #DED9D4;
-    color: #2E4057;
-    overflow: hidden;
-    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-}
+@media(max-resolution: 100dpi){
 
-hr{
-    width: 80%;
-}
-
-h1{
-    font-size: 45px;
-}
-
-p{
-    color: #2E4057;
-    font-size: 20px;
-    line-height: 1.4em;
-}
-
-.center{
-    text-align: center;
-}
-
-body{
-    backdrop-filter: blur(3px);
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-}
-
-a{
-    text-decoration:none;
-    color: #DDD;
-}
-
-.headernav{
-    width: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
-
-}
-
-.nav{
-    display: grid;
-    grid-template-columns: 200px;
-    grid-template-rows: 1fr 0.5fr;
-    grid-template-areas: " menup " " submenu1 ";
-}
-
-.title{
-    display: inline-block;
-    grid-area: menup;
-    width: 200px;
-    font-size: 21px;
-    font-weight: 500;
-    color: #2E4057;
-    padding-left: 70px;
-}
-
-.title:hover{
-    color: #AAA;
-}
-
-.submenu1{
-    grid-area: submenu1;
-    font-size: 18px;
-    margin-left: 80px;
-    line-height: 1.8em;
-}
-
-.flag{
-    padding-right: 90px;
-    align-self: center;
-    grid-area: flag;
-}
-
-main{
-    z-index: 100;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: auto 950px auto;
-    grid-template-rows: 40% 35% auto ;
-    gap: 15px;
-    width: 100%;
-    grid-template-areas:
-    ". interdictionlogo ."
-    ". message ."
-    ". bouton .";
-}
-
-.workinprogresslogo{ 
-    grid-area: interdictionlogo;
-    z-index: 5;
-    width: 900px;
-    position: relative;
-    top: -100px;
-    justify-self: center;
-}
-
-.message{
-    z-index: 100;
-    grid-area: message;
-    font-size: 27px;
-    font-weight: 400;
-    color: #2E4057;
-    text-align: center;
-    align-self: center;
-}
-
-.red{
-    color: #FF3366;
-}
-
-.bouton1 { 
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-    margin-right:350px;
-
-}
-
-.bouton2 { 
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-    margin-left:350px;
-}
-
-footer{
-    z-index: 10;
-}
-
-/* .footernav{
-    position: relative;
-    bottom: 0%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 800px;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . . github linkedin helpB";
-      padding-top: 25px ;
-} */
-
-.bottomnav{
-    z-index: 10000;
-    position: sticky;
-    position: -webkit-sticky;
-    bottom: 60px;
-    right: 40px;
-    float: right;
-    gap: 15px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "detailhelp helpB"
-    "detaillink linkedin"
-    "detailgit github";
-}
-
-.help { 
-    grid-area: helpB; 
-    justify-self: center;
-    align-self: center;
-
-}
-
-.linkedin { 
-    grid-area: linkedin; 
-    justify-self: center;
-    align-self: center;
-}
-
-.github { 
-    grid-area: github; 
-    justify-self: center;
-    align-self: center;
+    html{
+        background-color: #DED9D4;
+        color: #2E4057;
+        overflow: hidden;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    }
     
+    hr{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 45px;
+    }
+    
+    p{
+        color: #2E4057;
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    body{
+        backdrop-filter: blur(3px);
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+    
+    a{
+        text-decoration:none;
+        color: #DDD;
+    }
+    
+    .headernav{
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    
+    }
+    
+    .nav{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: " menup " " submenu1 ";
+    }
+    
+    .title{
+        display: inline-block;
+        grid-area: menup;
+        width: 200px;
+        font-size: 21px;
+        font-weight: 500;
+        color: #2E4057;
+        padding-left: 70px;
+    }
+    
+    .title:hover{
+        color: #AAA;
+    }
+    
+    .submenu1{
+        grid-area: submenu1;
+        font-size: 18px;
+        margin-left: 80px;
+        line-height: 1.8em;
+    }
+    
+    .flag{
+        padding-right: 90px;
+        align-self: center;
+        grid-area: flag;
+    }
+    
+    main{
+        z-index: 100;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-columns: auto 950px auto;
+        grid-template-rows: 40% 35% 5% ;
+        gap: 15px;
+        width: 100%;
+        grid-template-areas:
+        ". interdictionlogo ."
+        ". message ."
+        ". bouton .";
+    }
+    
+    .workinprogresslogo{ 
+        grid-area: interdictionlogo;
+        z-index: 5;
+        width: 900px;
+        position: relative;
+        top: -100px;
+        justify-self: center;
+    }
+    
+    .message{
+        z-index: 100;
+        grid-area: message;
+        font-size: 27px;
+        font-weight: 400;
+        color: #2E4057;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .red{
+        color: #FF3366;
+    }
+    
+    .bouton1 { 
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin-right:350px;
+    
+    }
+    
+    .bouton2 { 
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin-left:350px;
+    }
+
+    .bouton3{
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    footer{
+        z-index: 10;
+    }
+    
+    /* .footernav{
+        position: relative;
+        bottom: 0%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 800px;
+        gap: 0px 0px;
+        grid-template-areas:
+          ". . . . . . . . . . . . github linkedin helpB";
+          padding-top: 25px ;
+    } */
+    
+    .bottomnav{
+        z-index: 10000;
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 60px;
+        right: 40px;
+        float: right;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "detailhelp helpB"
+        "detaillink linkedin"
+        "detailgit github";
+    }
+    
+    .help { 
+        grid-area: helpB; 
+        justify-self: center;
+        align-self: center;
+    
+    }
+    
+    .linkedin { 
+        grid-area: linkedin; 
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .github { 
+        grid-area: github; 
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .helptxt { 
+        grid-area: detailhelp; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    
+    }
+    
+    .linkedintxt { 
+        grid-area: detaillink; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    }
+    
+    .githubtxt { 
+        grid-area: detailgit; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    }
+    
+    .icon{
+        height: 33px;
+        width: 33px;
+    }
+
 }
 
-.helptxt { 
-    grid-area: detailhelp; 
-    justify-self: center;
-    align-self: center;
-    width: 85px;
-    height: 33px;
-    /* display: none; */
 
+@media(min-resolution: 100dpi){
+
+    html{
+        background-color: #DED9D4;
+        color: #2E4057;
+        overflow: hidden;
+        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    }
+    
+    hr{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 45px;
+    }
+    
+    p{
+        color: #2E4057;
+        font-size: 20px;
+        line-height: 1.4em;
+    }
+    
+    .center{
+        text-align: center;
+    }
+    
+    body{
+        backdrop-filter: blur(3px);
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+    }
+    
+    a{
+        text-decoration:none;
+        color: #DDD;
+    }
+    
+    .headernav{
+        width: 100%;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    
+    }
+    
+    .nav{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: " menup " " submenu1 ";
+    }
+    
+    .title{
+        display: inline-block;
+        grid-area: menup;
+        width: 200px;
+        font-size: 21px;
+        font-weight: 500;
+        color: #2E4057;
+        padding-left: 70px;
+    }
+    
+    .title:hover{
+        color: #AAA;
+    }
+    
+    .submenu1{
+        grid-area: submenu1;
+        font-size: 18px;
+        margin-left: 80px;
+        line-height: 1.8em;
+    }
+    
+    .flag{
+        padding-right: 90px;
+        align-self: center;
+        grid-area: flag;
+    }
+    
+    main{
+        z-index: 100;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-columns: auto 800px auto;
+        grid-template-rows: 35% 35% 10% ;
+        gap: 15px;
+        width: 100%;
+        grid-template-areas:
+        ". interdictionlogo ."
+        ". message ."
+        ". bouton .";
+    }
+    
+    .workinprogresslogo{ 
+        grid-area: interdictionlogo;
+        z-index: 5;
+        width: 700px;
+        position: relative;
+        top: -100px;
+        justify-self: center;
+    }
+    
+    .message{
+        z-index: 100;
+        grid-area: message;
+        font-size: 22px;
+        font-weight: 400;
+        color: #2E4057;
+        text-align: center;
+        align-self: center;
+    }
+    
+    .red{
+        color: #FF3366;
+    }
+    
+    .bouton1 { 
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin-right:450px;
+    
+    }
+    
+    .bouton2 { 
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin-left:450px;
+    }
+
+    .bouton3{
+        grid-area: bouton;     
+        justify-self: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    
+    footer{
+        z-index: 10;
+    }
+    
+    /* .footernav{
+        position: relative;
+        bottom: 0%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 800px;
+        gap: 0px 0px;
+        grid-template-areas:
+          ". . . . . . . . . . . . github linkedin helpB";
+          padding-top: 25px ;
+    } */
+    
+    .bottomnav{
+        z-index: 10000;
+        position: sticky;
+        position: -webkit-sticky;
+        bottom: 60px;
+        right: 40px;
+        float: right;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "detailhelp helpB"
+        "detaillink linkedin"
+        "detailgit github";
+    }
+    
+    .help { 
+        grid-area: helpB; 
+        justify-self: center;
+        align-self: center;
+    
+    }
+    
+    .linkedin { 
+        grid-area: linkedin; 
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .github { 
+        grid-area: github; 
+        justify-self: center;
+        align-self: center;
+        
+    }
+    
+    .helptxt { 
+        grid-area: detailhelp; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    
+    }
+    
+    .linkedintxt { 
+        grid-area: detaillink; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    }
+    
+    .githubtxt { 
+        grid-area: detailgit; 
+        justify-self: center;
+        align-self: center;
+        width: 85px;
+        height: 33px;
+        /* display: none; */
+    }
+    
+    .icon{
+        height: 33px;
+        width: 33px;
+    }
 }
 
-.linkedintxt { 
-    grid-area: detaillink; 
-    justify-self: center;
-    align-self: center;
-    width: 85px;
-    height: 33px;
-    /* display: none; */
-}
 
-.githubtxt { 
-    grid-area: detailgit; 
-    justify-self: center;
-    align-self: center;
-    width: 85px;
-    height: 33px;
-    /* display: none; */
-}
-
-.icon{
-    height: 33px;
-    width: 33px;
-}

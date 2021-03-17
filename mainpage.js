@@ -14,6 +14,14 @@ bouton_realisations.addEventListener("mouseout", function(){
     bouton_realisations.src = "Images/Boutonrealisations.svg"
 })
 
+var bouton_realisations = document.querySelector("#bouton_cv")
+bouton_cv.addEventListener("mouseover", function(){
+    bouton_cv.src = "Images/Boutoncvhover.svg"
+})
+bouton_cv.addEventListener("mouseout", function(){
+    bouton_cv.src = "Images/Boutoncv.svg"
+})
+
 var help = document.querySelector("#help")
 help.addEventListener("mouseover", function() {
     var helptxt = document.getElementById("helptxt")
@@ -26,6 +34,8 @@ help.addEventListener("mouseout", function() {
     console.log("checkout")
     helptxt.innerHTML = ""
 })
+
+
 
 
 

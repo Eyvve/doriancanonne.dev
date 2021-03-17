@@ -181,3 +181,17 @@ footer{
     height: 33px;
     width: 33px;
 }
+
+
+
+@media(min-resolution: 100dpi){
+    p{
+        font-size: 18px;
+    }
+
+    .container{
+        grid-template-columns: auto 750px auto;
+    }
+}
+    
+
