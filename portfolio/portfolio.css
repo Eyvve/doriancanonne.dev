@@ -253,6 +253,10 @@ main{
     color: #FF3366;
 }
 
+.orange{
+    color: #E67B58;
+}
+
 .description{
     position: relative;
     display: grid;
