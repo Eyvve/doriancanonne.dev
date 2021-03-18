@@ -230,6 +230,76 @@ footer{
 }
 
 @media screen and (max-resolution: 100dpi) and (min-width: 2000px){
+
+    .mapbackground{
+        position: absolute;
+        height: 1170.44px;
+        left: 0;
+    }
+
+    .TranslateBG0{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .TranslateBG1{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -400px ;
+    }
+    
+    .TranslateBG2{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -800px ;
+    }
+    
+    .TranslateBG3{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1200px ;
+    }
+    
+    .TranslateBG4{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1600px ;
+    }
+    
+    .TranslateBG5{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1800px ;
+    }
+    
+    .TranslateBG6{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2100px ;
+    }
+
     .avatar{
         /* MODIFIE */
         position : absolute;
@@ -362,6 +432,75 @@ footer{
 
 @media screen and (max-resolution: 100dpi) and (max-width: 2000px ){
     
+    .mapbackground{
+        position: absolute;
+        height: 877.83px;
+        left: 0;
+    }
+
+    .TranslateBG0{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .TranslateBG1{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -400px ;
+    }
+    
+    .TranslateBG2{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -800px ;
+    }
+    
+    .TranslateBG3{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1200px ;
+    }
+    
+    .TranslateBG4{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1600px ;
+    }
+    
+    .TranslateBG5{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1800px ;
+    }
+    
+    .TranslateBG6{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2100px ;
+    }
+
     .avatar{
         /* MODIFIE */
         position : absolute;
@@ -490,6 +629,75 @@ footer{
 
 @media(min-resolution: 100dpi){
     
+    .mapbackground{
+        position: absolute;
+        height: 702.26px;
+        left: 0;
+    }
+
+    .TranslateBG0{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .TranslateBG1{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -300px ;
+    }
+    
+    .TranslateBG2{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -600px ;
+    }
+    
+    .TranslateBG3{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -900px ;
+    }
+    
+    .TranslateBG4{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1200px ;
+    }
+    
+    .TranslateBG5{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1400px ;
+    }
+    
+    .TranslateBG6{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1800px ;
+    }
+
     .avatar{
         /* MODIFIE */
         position : absolute;
@@ -555,7 +763,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2500px ;
+        left: -2600px ;
     }
     
     .date{

@@ -19,6 +19,8 @@ var datetxt = document.querySelector("#datetxt")
 
 var mapslider = document.querySelector("#mapslider")
 
+var mapbackground = document.querySelector("#mapbackground")
+
 var boutonlancer = document.querySelector("#boutonlancer")
 
 var txt0 = document.querySelector("#txt0")
@@ -56,7 +58,7 @@ rightbutton.addEventListener("click", function(){
     }
     if(position == 0){
         mapslider.classList.add("Translate0")
-
+        mapbackground.classList.add("TranslateBG0")
         transitionfunction()
         datetxt.innerHTML = "2015"
         txt0.style.display = "block"
@@ -64,8 +66,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 1){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate0")
+        mapbackground.classList.remove("TranslateBG0")
         transitionfunction()
         mapslider.classList.add("Translate1")
+        mapbackground.classList.add("TranslateBG1")
         datetxt.innerHTML = "2015-2018"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt0.style.display = "none"
@@ -74,8 +78,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 2){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate1")
+        mapbackground.classList.remove("TranslateBG1")
         transitionfunction()
         mapslider.classList.add("Translate2")
+        mapbackground.classList.add("TranslateBG2")
         datetxt.innerHTML = "2016-2018"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt1.style.display = "none"
@@ -84,8 +90,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 3){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate2")
+        mapbackground.classList.remove("TranslateBG2")
         transitionfunction()
         mapslider.classList.add("Translate3")
+        mapbackground.classList.add("TranslateBG3")
         datetxt.innerHTML = "2018-2019"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt2.style.display = "none"
@@ -94,8 +102,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 4){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate3")
+        mapbackground.classList.remove("TranslateBG3")
         transitionfunction()
         mapslider.classList.add("Translate4")
+        mapbackground.classList.add("TranslateBG4")
         datetxt.innerHTML = "2019-2020"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt3.style.display = "none"
@@ -104,8 +114,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 5){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate4")
+        mapbackground.classList.remove("TranslateBG4")
         transitionfunction()
         mapslider.classList.add("Translate5")
+        mapbackground.classList.add("TranslateBG5")
         datetxt.innerHTML = "2020"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt4.style.display = "none"
@@ -114,8 +126,10 @@ rightbutton.addEventListener("click", function(){
     else if(position == 6){
         avatar.src = "../Images/avatar_animated.gif"
         mapslider.classList.remove("Translate5")
+        mapbackground.classList.remove("TranslateBG5")
         transitionfunction()
         mapslider.classList.add("Translate6")
+        mapbackground.classList.add("TranslateBG6")
         datetxt.innerHTML = "2020-2023"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt5.style.display = "none"
@@ -133,8 +147,10 @@ leftbutton.addEventListener("click", function(){
     if(position == 6){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate5")
+        mapbackground.classList.remove("TranslateBG5")
         transitionfunction()
         mapslider.classList.add("Translate6")
+        mapbackground.classList.add("TranslateBG6")
         datetxt.innerHTML = "2020-2023"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt5.style.display = "none"
@@ -143,8 +159,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 5){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate6")
+        mapbackground.classList.remove("TranslateBG6")
         transitionfunction()
         mapslider.classList.add("Translate5")
+        mapbackground.classList.add("TranslateBG5")
         datetxt.innerHTML = "2020"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt6.style.display = "none"
@@ -153,8 +171,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 4){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate5")
+        mapbackground.classList.remove("TranslateBG5")
         transitionfunction()
         mapslider.classList.add("Translate4")
+        mapbackground.classList.add("TranslateBG4")
         datetxt.innerHTML = "2019-2020"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt5.style.display = "none"
@@ -163,8 +183,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 3){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate4")
+        mapbackground.classList.remove("TranslateBG4")
         transitionfunction()
         mapslider.classList.add("Translate3")
+        mapbackground.classList.add("TranslateBG3")
         datetxt.innerHTML = "2018-2019"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt4.style.display = "none"
@@ -173,8 +195,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 2){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate3")
+        mapbackground.classList.remove("TranslateBG3")
         transitionfunction()
         mapslider.classList.add("Translate2")
+        mapbackground.classList.add("TranslateBG2")
         datetxt.innerHTML = "2016-2018"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt3.style.display = "none"
@@ -183,8 +207,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 1){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate2")
+        mapbackground.classList.remove("TranslateBG2")
         transitionfunction()
         mapslider.classList.add("Translate1")
+        mapbackground.classList.add("TranslateBG1")
         datetxt.innerHTML = "2015-2018"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt2.style.display = "none"
@@ -193,8 +219,10 @@ leftbutton.addEventListener("click", function(){
     else if(position == 0){
         avatar.src = "../Images/avatar_animated_reversed.gif"
         mapslider.classList.remove("Translate1")
+        mapbackground.classList.remove("TranslateBG1")
         transitionfunction()
         mapslider.classList.add("Translate0")
+        mapbackground.classList.add("TranslateBG0")
         datetxt.innerHTML = "2015"
         setTimeout(() => {  avatar.src = "../Images/avatar_lookup.png" }, 3000)
         txt1.style.display = "none"
