@@ -135,8 +135,37 @@ main{
     justify-self: center;
 }
 
+.startdiv{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto;
+    grid-template-areas: "txtcv" "bouton";
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+
+}
+
+.txtcv{
+    grid-area: txtcv;
+    align-self: center;
+    justify-self: center;
+    font-size: 40px;
+    text-align: center;
+    max-width: 70%;
+}
+
+.boutonlancer{
+    grid-area: bouton;
+    align-self: center;
+    justify-self: center;
+}
+
 .txt0{
-    display: block;
+    display: none;
 }
 
 .txt1{
@@ -281,7 +310,7 @@ footer{
         /* MODIFIE */
         position: relative;
         z-index: 30000;
-        display: grid;
+        display: none;
         grid-template-columns: 50px 150px 50px ;
         grid-template-rows: 1fr ;
         grid-template-areas: "leftbutton date rightbutton";
@@ -405,7 +434,7 @@ footer{
         /* MODIFIE */
         position: relative;
         z-index: 30000;
-        display: grid;
+        display: none;
         grid-template-columns: 50px 150px 50px ;
         grid-template-rows: 1fr ;
         grid-template-areas: "leftbutton date rightbutton";
@@ -533,7 +562,7 @@ footer{
         /* MODIFIE */
         position: relative;
         z-index: 30000;
-        display: grid;
+        display: none;
         grid-template-columns: 50px 150px 50px ;
         grid-template-rows: 1fr ;
         grid-template-areas: "leftbutton date rightbutton";
@@ -547,7 +576,7 @@ footer{
         color: #DED9D4;
         z-index: 50000;
         width: 300px;
-        top: -29vh;
+        top: -20vh;
         left: 8vh;
         text-decoration: underline;
         font-size: 16px;

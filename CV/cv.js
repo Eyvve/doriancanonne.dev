@@ -11,9 +11,15 @@ var rightbutton = document.querySelector("#rightbutton")
 
 var avatar = document.querySelector("#avatar")
 
+var date = document.querySelector("#date")
+
+var startdiv = document.querySelector("#startdiv")
+
 var datetxt = document.querySelector("#datetxt")
 
 var mapslider = document.querySelector("#mapslider")
+
+var boutonlancer = document.querySelector("#boutonlancer")
 
 var txt0 = document.querySelector("#txt0")
 var txt1 = document.querySelector("#txt1")
@@ -26,6 +32,21 @@ var txt6 = document.querySelector("#txt6")
 function transitionfunction(){
     setTimeout(() => {  console.log("walking"); }, 3000);
 }
+
+boutonlancer.addEventListener("click", function(){
+    date.style.display = "grid"
+    txt0.style.display = "block"
+    startdiv.style.display = "none"
+    avatar.src = "../Images/avatar_lookup.png"
+})
+
+boutonlancer.addEventListener("mouseover", function(){
+    boutonlancer.src = "../Images/boutonlancerhover.svg"
+})
+
+boutonlancer.addEventListener("mouseout", function(){
+    boutonlancer.src = "../Images/boutonlancer.svg"
+})
 
 rightbutton.addEventListener("click", function(){
     console.log("go right")
