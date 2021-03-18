@@ -157,7 +157,7 @@ main{
 
 
 .bottomnav{
-    z-index: 10000;
+    z-index: 40000;
     position: absolute;
     position: -webkit-sticky;
     top: 92%;

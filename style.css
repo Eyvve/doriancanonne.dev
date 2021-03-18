@@ -1,3 +1,4 @@
+
 html{
     background-color: #DED9D4;
     color: #2E4057;
@@ -5,101 +6,117 @@ html{
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
-hr{
-    width: 80%;
-}
+/* Title behavior inpired by Mark Mead : https://codepen.io/markmead/pen/wvwjePG */
 
-h1{
-    font-size: 45px;
-}
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 
-p{
-    color: #2E4057;
-    font-size: 20px;
-    line-height: 1.4em;
-}
-
-.center{
-    text-align: center;
-}
-
-body{
-    backdrop-filter: blur(3px);
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-}
-
-a{
-    text-decoration:none;
-    color: #DDD;
-}
-
-.headernav{
-    width: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
-
-}
-
-.nav{
+.container{
+    /* background-color: #DED9D4; */
     display: grid;
-    grid-template-columns: 200px;
-    grid-template-rows: 1fr 0.5fr;
-    grid-template-areas: " menup " " submenu1 ";
+    align-content: center;
+    place-content: space-evenly;
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: 60vh;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
-.title{
-    display: inline-block;
-    grid-area: menup;
-    width: 200px;
-    font-size: 21px;
-    font-weight: 500;
-    color: #2E4057;
-    padding-left: 70px;
+.span{
+    font-weight: 550;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+    animation: linear fadeinname 1.5s;
+    -moz-animation: linear fadeinname 1.5s;
+    -webkit-animation: linear fadeinname 1.5s;
+    -o-animation: linear fadeinname 1.5s;
 }
 
-.title:hover{
-    color: #AAA;
-}
-
-.submenu1{
-    grid-area: submenu1;
-    font-size: 18px;
-    margin-left: 80px;
-    line-height: 1.8em;
-}
-
-.flag{
-    padding-right: 90px;
+.nom{
+    grid-template-areas: nom ;
+    position: relative;
+    top: 15%;
+    left: -40%;
     align-self: center;
-    grid-area: flag;
+    letter-spacing: 0.3rem;
+    font-size: 150px;
+    max-width: 35vw;
+    color: #2E4057;
 }
 
-main{
-    z-index: 100;
+.small{
+    font-size: 40px;
+    animation: fadeinrole 3s;
+    -moz-animation: fadeinnamerole 3s;
+    -webkit-animation: fadeinnamerole 3s;
+    -o-animation: fadeinnamerole 3s;
 }
 
-.red{
-    color: #FF3366;
+.nom span, .bouton2, .bouton3{
+    background-image: linear-gradient(transparent calc(65% - 5px), #CFC8C2 5px);
+    background-size: 0;
+    background-repeat: no-repeat;
+    display: inline;
+    transition: 0.5s ease;
+}
+
+.nom:hover span, .bouton2:hover, .bouton3:hover{
+background-size: 100%;
+}
+
+.boutons{
+    display: flex;
+    position: relative;
+    top: 15vh;
+    margin: 0 auto;
+    height: 20%;
+    width: 70%;
+    align-content: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.bouton1, .bouton2, .bouton3{
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: #2E4057;
+    margin-bottom: 139px;
+}
+
+.bouton1{
+    font-size: 40px;
+    animation: fadeinb1 4s;
+    -moz-animation: fadeinb1 4s;
+    -webkit-animation: fadeinb1 4s;
+    -o-animation: fadeinb1 4s;
+}
+
+.bouton2{
+    font-size: 40px;
+    animation: fadeinb2 3.5s;
+    -moz-animation: fadeinb2 3.5s;
+    -webkit-animation: fadeinb2 3.5s;
+    -o-animation: fadeinb2 3.5s;
 }
 
 .bouton3{
-    grid-area: bouton;     
-    justify-self: center;
-    align-self: center;
-    margin: 0 auto;
+    font-size: 40px;
+    animation: fadeinb3 3s;
+    -moz-animation: fadeinb3 3s;
+    -webkit-animation: fadeinb3 3s;
+    -o-animation: fadeinb3 3s;
 }
 
-footer{
-    z-index: 10;
-}
+/* .bouton1:hover, .bouton2:hover, .bouton3:hover{
+    text-decoration: none;
+    color: #AAA;
+} */
 
 .bottomnav{
     z-index: 10000;
     position: sticky;
     position: -webkit-sticky;
-    bottom: 60px;
+    bottom: -60px;
     right: 40px;
     float: right;
     gap: 15px;
@@ -138,17 +155,14 @@ footer{
     align-self: center;
     width: 85px;
     height: 33px;
-    /* display: none; */
-
 }
 
-.linkedintxt { 
+.linkedintxt {
     grid-area: detaillink; 
     justify-self: center;
     align-self: center;
     width: 85px;
     height: 33px;
-    /* display: none; */
 }
 
 .githubtxt { 
@@ -157,7 +171,6 @@ footer{
     align-self: center;
     width: 85px;
     height: 33px;
-    /* display: none; */
 }
 
 .icon{
@@ -165,171 +178,257 @@ footer{
     width: 33px;
 }
 
-@media screen and (max-resolution: 100dpi) and (min-width: 2000px){
-    .container{ 
-        /* MODIFIE */
-        display: grid;
-        grid-template-columns: auto 1000px auto;
-        grid-template-rows: 50% 35% 5% ;
-        gap: 15px;
-        width: 100%;
-        height: 80vh;
-        grid-template-areas:
-        ". interdictionlogo ."
-        ". message ."
-        ". bouton .";
-    }
-    
-    .workinprogresslogo{  
-        /* MODIFIE */
-        grid-area: interdictionlogo;
-        margin-top: 70px;
-        z-index: 5;
-        width: 1100px;
-        position: relative;
-        top: -100px;
-        justify-self: center;
-    }
-    
-    .message{ 
-        /* MODIFIE */
-        z-index: 100;
-        grid-area: message;
-        font-size: 27px;
-        font-weight: 400;
-        color: #2E4057;
-        text-align: center;
-        align-self: center;
-    }
-    
-    .bouton1 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-right:550px;
-    
-    }
-    
-    .bouton2 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-left:550px;
-    }
-}
-
-@media(max-resolution: 100dpi) and (max-width: 2000px){
-
-    .container{ 
-        /* MODIFIE */
-        display: grid;
-        grid-template-columns: auto 950px auto;
-        grid-template-rows: 40% 35% 5% ;
-        gap: 15px;
-        width: 100%;
-        grid-template-areas:
-        ". interdictionlogo ."
-        ". message ."
-        ". bouton .";
-    }
-    
-    .workinprogresslogo{  
-        /* MODIFIE */
-        grid-area: interdictionlogo;
-        z-index: 5;
-        width: 900px;
-        position: relative;
-        top: -100px;
-        justify-self: center;
-    }
-    
-    .message{ 
-        /* MODIFIE */
-        z-index: 100;
-        grid-area: message;
-        font-size: 27px;
-        font-weight: 400;
-        color: #2E4057;
-        text-align: center;
-        align-self: center;
-    }
-    
-    .bouton1 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-right:500px;
-    
-    }
-    
-    .bouton2 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-left:500px;
-    }
-
-}
-
-
 @media(min-resolution: 100dpi){
-    
-    .container{ 
-        /* MODIFIE */
-        display: grid;
-        grid-template-columns: auto 800px auto;
-        grid-template-rows: 35% 35% 10% ;
-        gap: 15px;
-        width: 100%;
-        grid-template-areas:
-        ". interdictionlogo ."
-        ". message ."
-        ". bouton .";
+    .span{
+        font-weight: 550;
+        text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+        animation: linear fadeinname 1.5s;
+        -moz-animation: linear fadeinname 1.5s;
+        -webkit-animation: linear fadeinname 1.5s;
+        -o-animation: linear fadeinname 1.5s;
     }
     
-    .workinprogresslogo{  
-        /* MODIFIE */
-        grid-area: interdictionlogo;
-        z-index: 5;
-        width: 700px;
+    .nom{
+        grid-template-areas: nom ;
         position: relative;
-        top: -100px;
-        justify-self: center;
-    }
-    
-    .message{ 
-        /* MODIFIE */
-        z-index: 100;
-        grid-area: message;
-        font-size: 22px;
-        font-weight: 400;
+        top: 15%;
+        left: -40%;
+        align-self: center;
+        letter-spacing: 0.3rem;
+        font-size: 100px;
+        max-width: 40vw;
         color: #2E4057;
-        text-align: center;
-        align-self: center;
     }
     
-    
-    .bouton1 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-right:450px;
-    
-    }
-    
-    .bouton2 {  
-        /* MODIFIE */
-        grid-area: bouton;     
-        justify-self: center;
-        align-self: center;
-        margin-left:450px;
+    .small{
+        font-size: 25px;
+        animation: fadeinrole 3s;
+        -moz-animation: fadeinnamerole 3s;
+        -webkit-animation: fadeinnamerole 3s;
+        -o-animation: fadeinnamerole 3s;
     }
 
-    
+    .bouton1, .bouton2, .bouton3{
+        text-decoration: none;
+        transition: 0.3s ease;
+        color: #2E4057;
+        margin-bottom: 60px;
+    }
 }
 
+/* FADEINNAME */
+
+@keyframes fadeinname {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadeinname {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadeinname {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadeinname { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FADEINROLE */
+
+@keyframes fadeinrole {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeinrole {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeinrole {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeinrole { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FADEINB1 */
+
+@keyframes fadeinb1 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeinb1 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeinb1 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeinb1 { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FADEINB2 */
+
+@keyframes fadeinb2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeinb2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeinb2 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeinb2 { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FADEINB3 */
+
+@keyframes fadeinb3 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeinb3 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeinb3 {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadeinb3 { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* FADEIN */
+
+.smoothtransition{
+    animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s;
+    -webkit-animation: fadein 0.3s;
+    -o-animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
