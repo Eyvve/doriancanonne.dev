@@ -31,6 +31,8 @@ var txt4 = document.querySelector("#txt4")
 var txt5 = document.querySelector("#txt5")
 var txt6 = document.querySelector("#txt6")
 
+var unlocked = false
+
 function transitionfunction(){
     setTimeout(() => {  console.log("walking"); }, 3000);
 }
@@ -40,6 +42,7 @@ boutonlancer.addEventListener("click", function(){
     txt0.style.display = "block"
     startdiv.style.display = "none"
     avatar.src = "../Images/avatar_lookup.png"
+    unlocked = true
 })
 
 boutonlancer.addEventListener("mouseover", function(){
@@ -57,11 +60,15 @@ function checkKey(e){
 
     if (e.keyCode == '37') {
         console.log("left key")
-        slide_left()
+        if (unlocked == true){
+            slide_left()
+        }
     }
     else if (e.keyCode == '39') {
         console.log("right key")
-        slide_right()
+        if (unlocked == true){
+            slide_right()
+        }
     }
 }
 
