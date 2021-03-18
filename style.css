@@ -6,6 +6,15 @@ html{
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 }
 
+img{
+    user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; 
+    -webkit-user-select: none; 
+    -moz-user-drag: none;
+}
+
 /* Title behavior inpired by Mark Mead : https://codepen.io/markmead/pen/wvwjePG */
 
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
