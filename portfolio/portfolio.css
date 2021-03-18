@@ -1,98 +1,342 @@
+html{
+    background-color: #DED9D4;
+    color: #2E4057;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    height: 200%;
+}
+
+hr{
+    width: 80%;
+}
+
+h1{
+    font-size: 45px;
+}
+
+p{
+    color: #2E4057;
+    font-size: 20px;
+    line-height: 1.4em;
+}
+
+.center{
+    text-align: center;
+}
+
+body{
+    backdrop-filter: blur(3px);
+    height: auto;
+    width: 100%;
+    margin: 0;
+    float: inline-start;
+}
+
+a{
+    text-decoration:none;
+    color: #DDD;
+}
+
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+.headernav{
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: " menup " " submenu1 ";
+}
+
+.title{
+    display: inline-block;
+    grid-area: menup;
+    width: 200px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2E4057;
+    padding-left: 70px;
+}
+
+.title:hover{
+    color: #AAA;
+}
+
+.submenu1{
+    grid-area: submenu1;
+    font-size: 18px;
+    margin-left: 80px;
+    line-height: 1.8em;
+}
+
+.flag{
+    padding-right: 90px;
+    align-self: center;
+    grid-area: flag;
+}
+
+main{
+    z-index: 100;
+}
+
+.timeline { 
+    grid-area: timeline; 
+}
+
+.timelineindicator{
+    display: flex;
+    position: relative;
+    
+    font-size: 17px;
+    flex-direction: column;
+    width: 120px;
+    left: 100px;
+}
+
+.horizTranslate0 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 100px ;
+  }
+
+.horizTranslate1 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 150px ;
+  }
+
+.horizTranslate2 {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    left: 200px ;
+}
+
+.date{
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+}
+
+.pointer{
+    position: relative;
+    top: 5px;
+    width: 23px;
+    height: 17px;
+    align-self: center;
+}
+
+.line{
+    width: 100%;
+}
+
+.leftarrow { 
+    grid-area: leftarrow;
+    align-self: center; 
+}
+
+.rightarrow { 
+    grid-area: rightarrow; 
+    align-self: center; 
+}
+
+.projectname { 
+    grid-area: projectname;
+    align-self: center;
+    font-size: 45px;
+    text-align: center;
+    line-height: 3em;
+}
+
+.projectlanguages { 
+    grid-area: projectlanguages; 
+    justify-self: center;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "leftbutton rightbutton";
+  grid-area: Buttons;
+}
+
+.leftbutton { 
+    grid-area: leftbutton; 
+    justify-self: center;
+}
+
+.rightbutton { 
+    grid-area: rightbutton; 
+    justify-self: center;
+}
+
+.red{
+    color: #FF3366;
+}
+
+.orange{
+    color: #E67B58;
+}
+
+.retour{
+    grid-area: retour; 
+    justify-self: center;
+    margin-top: 15px;
+    
+}
+
+.retourimg{
+    width: 150px;
+    text-align: center;
+}
+
+#description_txt1{
+    display: block;
+}
+
+#description_txt2{
+    display: none;
+}
+
+#description_txt3{
+    display: none;
+}
+
+.displaynone{
+    display: none;
+}
+
+.displayblock{
+    display: block;
+}
+
+.description-images { 
+    grid-area: description-images; 
+    display: flex;
+    justify-content: center;
+}
+
+.imgdesctransition{
+    position: absolute;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    bottom: 0px;
+    width: auto;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+.bottomnav{
+    z-index: 10000;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 60px;
+    right: 40px;
+    float: right;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "detailhelp helpB"
+    "detaillink linkedin"
+    "detailgit github";
+}
+
+.help { 
+    grid-area: helpB; 
+    justify-self: center;
+    align-self: center;
+
+}
+
+.linkedin { 
+    grid-area: linkedin; 
+    justify-self: center;
+    align-self: center;
+}
+
+.github { 
+    grid-area: github; 
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.helptxt { 
+    grid-area: detailhelp; 
+    justify-self: center;
+    align-self: center;
+    z-index: 200000;
+    width: 85px;
+    height: 33px;
+    color: #2E4057;
+    /* display: none; */
+
+}
+
+.linkedintxt { 
+    grid-area: detaillink; 
+    justify-self: center;
+    align-self: center;
+    z-index: 200000;
+    width: 85px;
+    height: 33px;
+    color: #2E4057;
+    /* display: none; */
+}
+
+.githubtxt { 
+    grid-area: detailgit; 
+    justify-self: center;
+    align-self: center;
+    z-index: 200000;
+    width: 85px;
+    height: 33px;
+    color: #2E4057;
+    /* display: none; */
+}
+
+.icon{
+    height: 33px;
+    width: 33px;
+}
+
+footer{
+    height: 0px;
+}
+
 @media(max-resolution: 100dpi){
 
-    html{
-        background-color: #DED9D4;
-        color: #2E4057;
-        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        height: 200%;
-    }
-    
-    hr{
-        width: 80%;
-    }
-    
-    h1{
-        font-size: 45px;
-    }
-    
-    p{
-        color: #2E4057;
-        font-size: 20px;
-        line-height: 1.4em;
-    }
-    
-    .center{
-        text-align: center;
-    }
-    
-    body{
-        backdrop-filter: blur(3px);
-        height: auto;
-        width: 100%;
-        margin: 0;
-        float: inline-start;
-    }
-    
-    a{
-        text-decoration:none;
-        color: #DDD;
-    }
-    
-    header{
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0px;
-    }
-    
-    .headernav{
-        width: 100%;
-        padding-top: 35px;
-        padding-bottom: 35px;
-    
-    }
-    
-    .nav{
-        display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 1fr 0.5fr;
-        grid-template-areas: " menup " " submenu1 ";
-    }
-    
-    .title{
-        display: inline-block;
-        grid-area: menup;
-        width: 200px;
-        font-size: 21px;
-        font-weight: 500;
-        color: #2E4057;
-        padding-left: 70px;
-    }
-    
-    .title:hover{
-        color: #AAA;
-    }
-    
-    .submenu1{
-        grid-area: submenu1;
-        font-size: 18px;
-        margin-left: 80px;
-        line-height: 1.8em;
-    }
-    
-    .flag{
-        padding-right: 90px;
-        align-self: center;
-        grid-area: flag;
-    }
-    
-    main{
-        z-index: 100;
-    }
     
     .container{
+        /* MODIFIE */
         display: grid;
         height: 100vh;
         grid-template-columns: auto 40px 900px 40px auto;
@@ -109,66 +353,8 @@
             ". . . . .";
     }
     
-    .timeline { 
-        grid-area: timeline; 
-    }
-    
-    .timelineindicator{
-        display: flex;
-        position: relative;
-        
-        font-size: 17px;
-        flex-direction: column;
-        width: 120px;
-        left: 100px;
-    }
-    
-    .horizTranslate0 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 100px ;
-      }
-    
-    .horizTranslate1 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 150px ;
-      }
-    
-    .horizTranslate2 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 200px ;
-    }
-    
-    .date{
-        align-self: center;
-        justify-self: center;
-        font-weight: bold;
-    }
-    
-    .pointer{
-        position: relative;
-        top: 5px;
-        width: 23px;
-        height: 17px;
-        align-self: center;
-    }
-    
-    .line{
-        width: 100%;
-    }
-    
     .ProjectImage { 
+        /* MODIFIE */
         grid-area: ProjectImage; 
         position: relative;
         top: 5%;
@@ -179,6 +365,7 @@
     }
     
     .slide0{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -189,6 +376,7 @@
     }
     
     .slide1{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -199,6 +387,7 @@
     }
     
     .slide2{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -208,58 +397,10 @@
         filter: blur(1px);
     }
     
-    .leftarrow { 
-        grid-area: leftarrow;
-        align-self: center; 
-    }
     
-    .rightarrow { 
-        grid-area: rightarrow; 
-        align-self: center; 
-    }
-    
-    .projectname { 
-        grid-area: projectname;
-        align-self: center;
-        font-size: 45px;
-        text-align: center;
-        line-height: 3em;
-    }
-    
-    .projectlanguages { 
-        grid-area: projectlanguages; 
-        justify-self: center;
-    }
-    
-    .Buttons {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "leftbutton rightbutton";
-      grid-area: Buttons;
-    }
-    
-    .leftbutton { 
-        grid-area: leftbutton; 
-        justify-self: center;
-    }
-    
-    .rightbutton { 
-        grid-area: rightbutton; 
-        justify-self: center;
-    }
-    
-    .red{
-        color: #FF3366;
-    }
-    
-    .orange{
-        color: #E67B58;
-    }
     
     .description{
+        /* MODIFIE */
         position: relative;
         display: grid;
         top: 128.75px;
@@ -277,57 +418,22 @@
             ". . .";
     }
     
-    .retour{
-        grid-area: retour; 
-        justify-self: center;
-        margin-top: 15px;
-        
-    }
-    
-    .retourimg{
-        width: 150px;
-        text-align: center;
-    }
-    
     .description_logo { 
+        /* MODIFIE */
         grid-area: description_logo; 
         height: 150px;
         justify-self: center;
     }
     .description_txt { 
+        /* MODIFIE */
         grid-area: description_txt; 
         color: #DED9D4;
         font-size: 17px;
         font-weight: 600;
     }
     
-    #description_txt1{
-        display: block;
-    }
-    
-    #description_txt2{
-        display: none;
-    }
-    
-    #description_txt3{
-        display: none;
-    }
-    
-    .displaynone{
-        display: none;
-    }
-    
-    .displayblock{
-        display: block;
-    }
-    
-    .description-images { 
-        grid-area: description-images; 
-        display: flex;
-        justify-content: center;
-    }
-    
     .imgdesc{
+        /* MODIFIE */
         height: 200px;
         margin-left: 30px;
         margin-right: 30px;
@@ -430,99 +536,10 @@
 
 @media(min-resolution: 100dpi){
 
-    html{
-        background-color: #DED9D4;
-        color: #2E4057;
-        font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        scroll-behavior: smooth;
-        height: 200%;
-    }
     
-    hr{
-        width: 80%;
-    }
-    
-    h1{
-        font-size: 45px;
-    }
-    
-    p{
-        color: #2E4057;
-        font-size: 20px;
-        line-height: 1.4em;
-    }
-    
-    .center{
-        text-align: center;
-    }
-    
-    body{
-        backdrop-filter: blur(3px);
-        height: auto;
-        width: 100%;
-        margin: 0;
-        float: inline-start;
-    }
-    
-    a{
-        text-decoration:none;
-        color: #DDD;
-    }
-    
-    header{
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0px;
-    }
-    
-    .headernav{
-        width: 100%;
-        padding-top: 35px;
-        padding-bottom: 35px;
-    
-    }
-    
-    .nav{
-        display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 1fr 0.5fr;
-        grid-template-areas: " menup " " submenu1 ";
-    }
-    
-    .title{
-        display: inline-block;
-        grid-area: menup;
-        width: 200px;
-        font-size: 21px;
-        font-weight: 500;
-        color: #2E4057;
-        padding-left: 70px;
-    }
-    
-    .title:hover{
-        color: #AAA;
-    }
-    
-    .submenu1{
-        grid-area: submenu1;
-        font-size: 18px;
-        margin-left: 80px;
-        line-height: 1.8em;
-    }
-    
-    .flag{
-        padding-right: 90px;
-        align-self: center;
-        grid-area: flag;
-    }
-    
-    main{
-        z-index: 100;
-    }
     
     .container{
+        /* MODIFIE */
         display: grid;
         height: 100vh;
         grid-template-columns: auto 40px 900px 40px auto;
@@ -539,66 +556,10 @@
             ". . . . .";
     }
     
-    .timeline { 
-        grid-area: timeline; 
-    }
     
-    .timelineindicator{
-        display: flex;
-        position: relative;
-        
-        font-size: 17px;
-        flex-direction: column;
-        width: 120px;
-        left: 100px;
-    }
-    
-    .horizTranslate0 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 100px ;
-      }
-    
-    .horizTranslate1 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 150px ;
-      }
-    
-    .horizTranslate2 {
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -ms-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        left: 200px ;
-    }
-    
-    .date{
-        align-self: center;
-        justify-self: center;
-        font-weight: bold;
-    }
-    
-    .pointer{
-        position: relative;
-        top: 5px;
-        width: 23px;
-        height: 17px;
-        align-self: center;
-    }
-    
-    .line{
-        width: 100%;
-    }
     
     .ProjectImage { 
+        /* MODIFIE */
         grid-area: ProjectImage; 
         position: relative;
         top: 12%;
@@ -609,6 +570,7 @@
     }
     
     .slide0{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -619,6 +581,7 @@
     }
     
     .slide1{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -629,6 +592,7 @@
     }
     
     .slide2{
+        /* MODIFIE */
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -ms-transition: 1s;
@@ -638,58 +602,10 @@
         filter: blur(1px);
     }
     
-    .leftarrow { 
-        grid-area: leftarrow;
-        align-self: center; 
-    }
     
-    .rightarrow { 
-        grid-area: rightarrow; 
-        align-self: center; 
-    }
-    
-    .projectname { 
-        grid-area: projectname;
-        align-self: center;
-        font-size: 45px;
-        text-align: center;
-        line-height: 3em;
-    }
-    
-    .projectlanguages { 
-        grid-area: projectlanguages; 
-        justify-self: center;
-    }
-    
-    .Buttons {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "leftbutton rightbutton";
-      grid-area: Buttons;
-    }
-    
-    .leftbutton { 
-        grid-area: leftbutton; 
-        justify-self: center;
-    }
-    
-    .rightbutton { 
-        grid-area: rightbutton; 
-        justify-self: center;
-    }
-    
-    .red{
-        color: #FF3366;
-    }
-    
-    .orange{
-        color: #E67B58;
-    }
     
     .description{
+        /* MODIFIE */
         position: relative;
         display: grid;
         top: 128.75px;
@@ -707,155 +623,28 @@
             ". . .";
     }
     
-    .retour{
-        grid-area: retour; 
-        justify-self: center;
-        margin-top: 15px;
-        
-    }
-    
-    .retourimg{
-        width: 150px;
-        text-align: center;
-    }
-    
     .description_logo { 
+        /* MODIFIE */
         grid-area: description_logo; 
         height: 120px;
         justify-self: center;
     }
     .description_txt { 
+        /* MODIFIE */
         grid-area: description_txt; 
         color: #DED9D4;
         font-size: 16px;
         font-weight: 600;
     }
     
-    #description_txt1{
-        display: block;
-    }
-    
-    #description_txt2{
-        display: none;
-    }
-    
-    #description_txt3{
-        display: none;
-    }
-    
-    .displaynone{
-        display: none;
-    }
-    
-    .displayblock{
-        display: block;
-    }
-    
-    .description-images { 
-        grid-area: description-images; 
-        display: flex;
-        justify-content: center;
-    }
-    
     .imgdesc{
+        /* MODIFIE */
         height: 150px;
         margin-left: 30px;
         margin-right: 30px;
     }
     
-    .imgdesctransition{
-        position: absolute;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-        bottom: 0px;
-        width: auto;
-        margin: 0 auto;
-        height: 100%;
-    }
     
-    
-    .bottomnav{
-        z-index: 10000;
-        position: sticky;
-        position: -webkit-sticky;
-        bottom: 60px;
-        right: 40px;
-        float: right;
-        gap: 15px;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "detailhelp helpB"
-        "detaillink linkedin"
-        "detailgit github";
-    }
-    
-    .help { 
-        grid-area: helpB; 
-        justify-self: center;
-        align-self: center;
-    
-    }
-    
-    .linkedin { 
-        grid-area: linkedin; 
-        justify-self: center;
-        align-self: center;
-    }
-    
-    .github { 
-        grid-area: github; 
-        justify-self: center;
-        align-self: center;
-        
-    }
-    
-    .helptxt { 
-        grid-area: detailhelp; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    
-    }
-    
-    .linkedintxt { 
-        grid-area: detaillink; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    }
-    
-    .githubtxt { 
-        grid-area: detailgit; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    }
-    
-    .icon{
-        height: 33px;
-        width: 33px;
-    }
-    
-    footer{
-        height: 0px;
-    }
 }
-}
+
 
