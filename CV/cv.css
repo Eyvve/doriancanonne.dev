@@ -119,16 +119,20 @@ main{
 .datetxt{
     font-size: 30px;
     grid-area: date ; 
+    line-height: 30px ;
+    font-weight: 480;
     color: #DED9D4;
     justify-self: center;
 }
 
 .leftbutton{
     grid-area: leftbutton ;
+    justify-self: center;
 }
 
 .rightbutton{
     grid-area: rightbutton ;
+    justify-self: center;
 }
 
 .txt0{
@@ -276,8 +280,19 @@ footer{
         grid-template-rows: 1fr ;
         grid-template-areas: "leftbutton date rightbutton";
         height: 100px;
-        top: -12vh;
+        top: -15vh;
         left: 72vh;
+    }
+
+    .pdf{
+        position: relative;
+        color: #DED9D4;
+        z-index: 50000;
+        width: 300px;
+        top: -25vh;
+        left: 8vh;
+        text-decoration: underline;
+        font-size: 18px;
     }
     
     .bulle{
@@ -397,6 +412,16 @@ footer{
         left: 72vh;
     }
     
+    .pdf{
+        position: relative;
+        color: #DED9D4;
+        z-index: 50000;
+        width: 300px;
+        top: -29vh;
+        left: 8vh;
+        text-decoration: underline;
+        font-size: 16px;
+    }
     
     .bulle{
         /* MODIFIE */
