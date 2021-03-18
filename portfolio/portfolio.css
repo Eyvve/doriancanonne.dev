@@ -248,7 +248,7 @@ main{
     bottom: 0px;
     width: auto;
     margin: 0 auto;
-    height: 100%;
+    height: 100% !important;
 }
 
 
@@ -333,6 +333,7 @@ footer{
 }
 
 @media screen and (max-resolution: 100dpi) and (min-width: 2000px){
+    
     .container{
         /* MODIFIE */
         display: grid;
@@ -408,7 +409,7 @@ footer{
         width: 100%;
         background-color: #2E4057;
         grid-template-columns: auto 1000px auto;
-        grid-template-rows: 80px 22% 35% 25% auto;
+        grid-template-rows: 80px 18% 38% 25% auto;
         gap: 0px 0px;
         grid-template-areas:
             ". retour ."
@@ -421,6 +422,7 @@ footer{
     .description_logo { 
         /* MODIFIE */
         grid-area: description_logo; 
+        margin-top: 40px;
         height: 120px;
         justify-self: center;
     }
@@ -428,13 +430,13 @@ footer{
         /* MODIFIE */
         grid-area: description_txt; 
         color: #DED9D4;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 600;
     }
     
     .imgdesc{
         /* MODIFIE */
-        height: 150px;
+        height: 230px;
         margin-left: 30px;
         margin-right: 30px;
     }

@@ -287,7 +287,7 @@ footer{
         grid-template-areas: "leftbutton date rightbutton";
         height: 100px;
         top: -15vh;
-        left: 72vh;
+        left: 85vh;
     }
 
     .pdf{
@@ -411,7 +411,7 @@ footer{
         grid-template-areas: "leftbutton date rightbutton";
         height: 100px;
         top: -15vh;
-        left: 72vh;
+        left: 77vh;
     }
 
     .pdf{
