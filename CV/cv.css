@@ -193,6 +193,10 @@ main{
     display: none;
 }
 
+.pdf{
+    display: none;
+}
+
 
 .bottomnav{
     z-index: 40000;
