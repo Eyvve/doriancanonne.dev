@@ -261,7 +261,7 @@ footer{
         grid-area: bouton;     
         justify-self: center;
         align-self: center;
-        margin-right:350px;
+        margin-right:500px;
     
     }
     
@@ -270,7 +270,7 @@ footer{
         grid-area: bouton;     
         justify-self: center;
         align-self: center;
-        margin-left:350px;
+        margin-left:500px;
     }
 
 }
