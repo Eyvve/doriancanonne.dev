@@ -332,7 +332,115 @@ footer{
     height: 0px;
 }
 
-@media(max-resolution: 100dpi){
+@media screen and (max-resolution: 100dpi) and (min-width: 2000px){
+    .container{
+        /* MODIFIE */
+        display: grid;
+        height: 100vh;
+        grid-template-columns: auto 40px 900px 40px auto;
+        grid-template-rows: 8% 26% 5% 13% 12% auto 80px;
+        gap: 0px 0px;
+        overflow: hidden;
+        grid-template-areas:
+            "timeline timeline timeline timeline timeline"
+            ". . ProjectImage . ."
+            ". . . . ."
+            ". leftarrow projectname rightarrow ."
+            ". . projectlanguages . ."
+            ". . Buttons . ."
+            ". . . . .";
+    }
+    
+    
+    
+    .ProjectImage { 
+        /* MODIFIE */
+        grid-area: ProjectImage; 
+        position: relative;
+        top: 12%;
+        left: 1690px ;
+        height: 250px;
+        justify-self: center;
+        overflow: hidden;
+    }
+    
+    .slide0{
+        /* MODIFIE */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        left: 1690px ;
+        filter: blur(1px);
+    }
+    
+    .slide1{
+        /* MODIFIE */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        left: 0px ;
+        filter: blur(1px);
+    }
+    
+    .slide2{
+        /* MODIFIE */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+        left: -1690px ;
+        filter: blur(1px);
+    }
+    
+    
+    
+    .description{
+        /* MODIFIE */
+        position: relative;
+        display: grid;
+        top: 128.75px;
+        height: 87vh;
+        width: 100%;
+        background-color: #2E4057;
+        grid-template-columns: auto 1000px auto;
+        grid-template-rows: 80px 22% 35% 25% auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". retour ."
+            ". description_logo ."
+            ". description_txt ."
+            "description-images description-images description-images"
+            ". . .";
+    }
+    
+    .description_logo { 
+        /* MODIFIE */
+        grid-area: description_logo; 
+        height: 120px;
+        justify-self: center;
+    }
+    .description_txt { 
+        /* MODIFIE */
+        grid-area: description_txt; 
+        color: #DED9D4;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .imgdesc{
+        /* MODIFIE */
+        height: 150px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media(max-resolution: 100dpi) and (max-width: 2000px){
 
     
     .container{
@@ -438,106 +546,10 @@ footer{
         margin-left: 30px;
         margin-right: 30px;
     }
-    
-    .imgdesctransition{
-        position: absolute;
-        -webkit-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-        bottom: 0px;
-        width: auto;
-        margin: 0 auto;
-        height: 100%;
-    }
-    
-    
-    .bottomnav{
-        z-index: 10000;
-        position: sticky;
-        position: -webkit-sticky;
-        bottom: 60px;
-        right: 40px;
-        float: right;
-        gap: 15px;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "detailhelp helpB"
-        "detaillink linkedin"
-        "detailgit github";
-    }
-    
-    .help { 
-        grid-area: helpB; 
-        justify-self: center;
-        align-self: center;
-    
-    }
-    
-    .linkedin { 
-        grid-area: linkedin; 
-        justify-self: center;
-        align-self: center;
-    }
-    
-    .github { 
-        grid-area: github; 
-        justify-self: center;
-        align-self: center;
-        
-    }
-    
-    .helptxt { 
-        grid-area: detailhelp; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    
-    }
-    
-    .linkedintxt { 
-        grid-area: detaillink; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    }
-    
-    .githubtxt { 
-        grid-area: detailgit; 
-        justify-self: center;
-        align-self: center;
-        z-index: 200000;
-        width: 85px;
-        height: 33px;
-        color: #2E4057;
-        /* display: none; */
-    }
-    
-    .icon{
-        height: 33px;
-        width: 33px;
-    }
-    
-    footer{
-        height: 0px;
-    }
 }
 
 @media(min-resolution: 100dpi){
 
-    
-    
     .container{
         /* MODIFIE */
         display: grid;

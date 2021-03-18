@@ -200,6 +200,136 @@ footer{
     height: 0px;
 }
 
+@media screen and (max-resolution: 100dpi) and (min-width: 2000px){
+    .avatar{
+        /* MODIFIE */
+        position : absolute;
+        top: 47.5vh;
+        height: 190px;
+        left: 32vh;
+    }
+
+    .mapslider{
+        /* TEMPORAIRE */
+        position: relative;
+        bottom: 0px;
+        height: 87vh;
+        left: 0px;
+    }
+    
+    .Translate1 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -960px ;
+    }
+    
+    .Translate2 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1720px ;
+    }
+    
+    .Translate3 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2450px ;
+    }
+    
+    .Translate4 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -3450px ;
+    }
+    
+    .Translate5 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -3850px ;
+    }
+    
+    .Translate6 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -4450px ;
+    }
+    
+    .date{
+        /* MODIFIE */
+        position: relative;
+        z-index: 30000;
+        display: grid;
+        grid-template-columns: 50px 150px 50px ;
+        grid-template-rows: 1fr ;
+        grid-template-areas: "leftbutton date rightbutton";
+        height: 100px;
+        top: -15vh;
+        left: 72vh;
+    }
+
+    .pdf{
+        position: relative;
+        color: #DED9D4;
+        z-index: 50000;
+        width: 300px;
+        top: -22.5vh;
+        left: 8vh;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+    
+    .bulle{
+        /* MODIFIE */
+        position: relative;
+        top: -90vh;
+        left: 45vw;
+        width: 900px;
+        height: 700px;
+        background-color: rgba(46, 64, 87, 0.90);
+        color: #DED9D4;
+    }
+    
+    .txt{
+        /* MODIFIE */
+        padding: 40px;
+        font-size: 25px;
+    }
+    
+    .txt3{
+        /* MODIFIE */
+        display: none;
+        font-size: 24px;
+    }
+    
+    .txt5{
+        /* MODIFIE */
+        display: none;
+        font-size: 25px;
+    }
+}
 
 @media screen and (max-resolution: 100dpi) and (max-width: 2000px ){
     

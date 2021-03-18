@@ -182,8 +182,6 @@ footer{
     width: 33px;
 }
 
-
-
 @media(min-resolution: 100dpi){
     p{
         font-size: 18px;
