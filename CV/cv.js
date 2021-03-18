@@ -50,7 +50,24 @@ boutonlancer.addEventListener("mouseout", function(){
     boutonlancer.src = "../Images/boutonlancer.svg"
 })
 
-rightbutton.addEventListener("click", function(){
+document.onkeydown = checkKey;
+
+function checkKey(e){
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        console.log("left key")
+        slide_left()
+    }
+    else if (e.keyCode == '39') {
+        console.log("right key")
+        slide_right()
+    }
+}
+
+rightbutton.addEventListener("click", slide_right, false)
+
+function slide_right(){
     console.log("go right")
     position = position + 1
     if(position >= 6){
@@ -136,9 +153,11 @@ rightbutton.addEventListener("click", function(){
         txt6.style.display = "block"
     }
     console.log(position)
-})
+}
 
-leftbutton.addEventListener("click", function(){
+leftbutton.addEventListener("click", slide_left, false)
+
+function slide_left(){
     console.log("go left")
     position = position - 1
     if(position <= 0){
@@ -229,7 +248,7 @@ leftbutton.addEventListener("click", function(){
         txt0.style.display = "block"
     }
     console.log(position)
-})
+}
 
 var txt1 = document.querySelector("#txt1")
 var txt2 = document.querySelector("#txt2")
