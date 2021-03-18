@@ -242,208 +242,7 @@ footer{
 
     .mapbackground{
         position: absolute;
-        height: 1170.44px;
-        left: 0;
-    }
-
-    .TranslateBG0{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: 0px ;
-    }
-    
-    .TranslateBG1{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -400px ;
-    }
-    
-    .TranslateBG2{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -800px ;
-    }
-    
-    .TranslateBG3{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1200px ;
-    }
-    
-    .TranslateBG4{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1600px ;
-    }
-    
-    .TranslateBG5{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1800px ;
-    }
-    
-    .TranslateBG6{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2100px ;
-    }
-
-    .avatar{
-        /* MODIFIE */
-        position : absolute;
-        top: 47.5vh;
-        height: 190px;
-        left: 32vh;
-    }
-
-    .mapslider{
-        /* TEMPORAIRE */
-        position: relative;
-        bottom: 0px;
-        height: 87vh;
-        left: 0px;
-    }
-    
-    .Translate1 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -960px ;
-    }
-    
-    .Translate2 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1720px ;
-    }
-    
-    .Translate3 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2450px ;
-    }
-    
-    .Translate4 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -3450px ;
-    }
-    
-    .Translate5 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -3850px ;
-    }
-    
-    .Translate6 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -4450px ;
-    }
-    
-    .date{
-        /* MODIFIE */
-        position: relative;
-        z-index: 30000;
-        display: none;
-        grid-template-columns: 50px 150px 50px ;
-        grid-template-rows: 1fr ;
-        grid-template-areas: "leftbutton date rightbutton";
-        height: 100px;
-        top: -15vh;
-        left: 85vh;
-    }
-
-    .pdf{
-        position: relative;
-        color: #DED9D4;
-        z-index: 50000;
-        width: 300px;
-        top: -22.5vh;
-        left: 8vh;
-        text-decoration: underline;
-        font-size: 18px;
-    }
-    
-    .bulle{
-        /* MODIFIE */
-        position: relative;
-        top: -90vh;
-        left: 45vw;
-        width: 900px;
-        height: 700px;
-        background-color: rgba(46, 64, 87, 0.90);
-        color: #DED9D4;
-    }
-    
-    .txt{
-        /* MODIFIE */
-        padding: 40px;
-        font-size: 25px;
-    }
-    
-    .txt3{
-        /* MODIFIE */
-        display: none;
-        font-size: 24px;
-    }
-    
-    .txt5{
-        /* MODIFIE */
-        display: none;
-        font-size: 25px;
-    }
-}
-
-@media screen and (max-resolution: 100dpi) and (max-width: 2000px ){
-    
-    .mapbackground{
-        position: absolute;
-        height: 877.83px;
+        height: 1124.02px;
         left: 0;
     }
 
@@ -514,6 +313,207 @@ footer{
         /* MODIFIE */
         position : absolute;
         top: 47vh;
+        height: 190px;
+        left: 32vh;
+    }
+
+    .mapslider{
+        /* TEMPORAIRE */
+        position: relative;
+        bottom: 0px;
+        height: 87vh;
+        left: 0px;
+    }
+    
+    .Translate1 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -900px ;
+    }
+    
+    .Translate2 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1630px ;
+    }
+    
+    .Translate3 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2250px ;
+    }
+    
+    .Translate4 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -3260px ;
+    }
+    
+    .Translate5 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -3650px ;
+    }
+    
+    .Translate6 {
+        /* MODIFIE */
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -4100px ;
+    }
+    
+    .date{
+        /* MODIFIE */
+        position: relative;
+        z-index: 30000;
+        display: none;
+        grid-template-columns: 50px 150px 50px ;
+        grid-template-rows: 1fr ;
+        grid-template-areas: "leftbutton date rightbutton";
+        height: 100px;
+        top: -15vh;
+        left: 85vh;
+    }
+
+    .pdf{
+        position: relative;
+        color: #DED9D4;
+        z-index: 50000;
+        width: 300px;
+        top: -22.5vh;
+        left: 8vh;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+    
+    .bulle{
+        /* MODIFIE */
+        position: relative;
+        top: -90vh;
+        left: 45vw;
+        width: 900px;
+        height: 700px;
+        background-color: rgba(46, 64, 87, 0.90);
+        color: #DED9D4;
+    }
+    
+    .txt{
+        /* MODIFIE */
+        padding: 40px;
+        font-size: 25px;
+    }
+    
+    .txt3{
+        /* MODIFIE */
+        display: none;
+        font-size: 24px;
+    }
+    
+    .txt5{
+        /* MODIFIE */
+        display: none;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-resolution: 100dpi) and (max-width: 2000px ){
+    
+    .mapbackground{
+        position: absolute;
+        height: 843.02px;
+        left: 0;
+    }
+
+    .TranslateBG0{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: 0px ;
+    }
+    
+    .TranslateBG1{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -400px ;
+    }
+    
+    .TranslateBG2{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -800px ;
+    }
+    
+    .TranslateBG3{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1200px ;
+    }
+    
+    .TranslateBG4{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1600px ;
+    }
+    
+    .TranslateBG5{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -1800px ;
+    }
+    
+    .TranslateBG6{
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+        transition: 3s;
+        left: -2100px ;
+    }
+
+    .avatar{
+        /* MODIFIE */
+        position : absolute;
+        top: 46vh;
         height: 150px;
         left: 30vh;
     }
@@ -525,7 +525,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -710px ;
+        left: -690px ;
     }
     
     .Translate2 {
@@ -535,7 +535,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -1300px ;
+        left: -1240px ;
     }
     
     .Translate3 {
@@ -545,7 +545,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -1800px ;
+        left: -1700px ;
     }
     
     .Translate4 {
@@ -555,7 +555,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2550px ;
+        left: -2450px ;
     }
     
     .Translate5 {
@@ -565,7 +565,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2850px ;
+        left: -2760px ;
     }
     
     .Translate6 {
@@ -575,7 +575,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -3300px ;
+        left: -3100px ;
     }
     
     .date{
@@ -640,7 +640,7 @@ footer{
     
     .mapbackground{
         position: absolute;
-        height: 702.26px;
+        height: 674.41px;
         left: 0;
     }
 
@@ -710,7 +710,7 @@ footer{
     .avatar{
         /* MODIFIE */
         position : absolute;
-        top: 43.5vh;
+        top: 43vh;
         height: 150px;
         left: 30vh;
     }
@@ -722,7 +722,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -550px ;
+        left: -540px ;
     }
     
     .Translate2 {
@@ -732,7 +732,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -1000px ;
+        left: -965px ;
     }
     
     .Translate3 {
@@ -742,7 +742,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -1400px ;
+        left: -1350px ;
     }
     
     .Translate4 {
@@ -752,7 +752,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2010px ;
+        left: -1930px ;
     }
     
     .Translate5 {
@@ -762,7 +762,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2250px ;
+        left: -2190px ;
     }
     
     .Translate6 {
@@ -772,7 +772,7 @@ footer{
         -ms-transition: 3s;
         -o-transition: 3s;
         transition: 3s;
-        left: -2600px ;
+        left: -2500px ;
     }
     
     .date{
@@ -793,7 +793,7 @@ footer{
         color: #DED9D4;
         z-index: 50000;
         width: 300px;
-        top: -20vh;
+        top: -29.5vh;
         left: 8vh;
         text-decoration: underline;
         font-size: 16px;
