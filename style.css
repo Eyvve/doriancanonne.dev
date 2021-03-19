@@ -139,11 +139,11 @@ background-size: 100%;
 }
 
 .avatartransitionout{
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.9s;
+    -moz-transition: 0.9s;
+    -ms-transition: 0.9s;
+    -o-transition: 0.9s;
+    transition: 0.9s;
     top: 500px ;
 }
 
