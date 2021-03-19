@@ -124,7 +124,7 @@ background-size: 100%;
 .avatar{
     position: relative;
     width: 10%;
-    top: 15%;
+    top: 500px;
     left: 50%;
 }
 
@@ -134,7 +134,7 @@ background-size: 100%;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    top: 5vh ;
+    top: 5.8vh ;
 }
 
 .avatartransitionout{
@@ -219,7 +219,7 @@ background-size: 100%;
         -ms-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        top: 10vh ;
+        top: 10.8vh ;
     } 
 }
 
@@ -266,7 +266,7 @@ background-size: 100%;
         -ms-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
-        top: 10vh ;
+        top: 10.5vh ;
     }
 }
 

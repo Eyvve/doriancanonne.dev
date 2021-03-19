@@ -125,6 +125,66 @@ main{
     left: 0px ;
 }
 
+.Translate1 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -16% ;
+}
+
+.Translate2 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -29% ;
+}
+
+.Translate3 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -40% ;
+}
+
+.Translate4 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -58% ;
+}
+
+.Translate5 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -65% ;
+}
+
+.Translate6 {
+    /* MODIFIE */
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -74% ;
+}
+
 .datetxt{
     font-size: 30px;
     grid-area: date ; 
@@ -246,7 +306,7 @@ footer{
 
     .mapbackground{
         position: absolute;
-        height: 1124.02px;
+        height: 87vh;
         left: 0;
     }
 
@@ -320,74 +380,6 @@ footer{
         height: 190px;
         left: 32vh;
     }
-
-    .mapslider{
-        /* TEMPORAIRE */
-        position: relative;
-        bottom: 0px;
-        height: 87vh;
-        left: 0px;
-    }
-    
-    .Translate1 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -900px ;
-    }
-    
-    .Translate2 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1630px ;
-    }
-    
-    .Translate3 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2250px ;
-    }
-    
-    .Translate4 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -3260px ;
-    }
-    
-    .Translate5 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -3650px ;
-    }
-    
-    .Translate6 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -4100px ;
-    }
     
     .date{
         /* MODIFIE */
@@ -447,7 +439,7 @@ footer{
     
     .mapbackground{
         position: absolute;
-        height: 843.02px;
+        height: 87vh;
         left: 0;
     }
 
@@ -517,69 +509,9 @@ footer{
     .avatar{
         /* MODIFIE */
         position : absolute;
-        top: 46vh;
+        top: 53.5%;
         height: 150px;
         left: 30vh;
-    }
-    
-    .Translate1 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -690px ;
-    }
-    
-    .Translate2 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1240px ;
-    }
-    
-    .Translate3 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1700px ;
-    }
-    
-    .Translate4 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2450px ;
-    }
-    
-    .Translate5 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2760px ;
-    }
-    
-    .Translate6 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -3100px ;
     }
     
     .date{
@@ -644,7 +576,7 @@ footer{
     
     .mapbackground{
         position: absolute;
-        height: 674.41px;
+        height: 87vh;
         left: 0;
     }
 
@@ -714,69 +646,9 @@ footer{
     .avatar{
         /* MODIFIE */
         position : absolute;
-        top: 43vh;
+        top: 49.7%;
         height: 150px;
         left: 30vh;
-    }
-    
-    .Translate1 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -540px ;
-    }
-    
-    .Translate2 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -965px ;
-    }
-    
-    .Translate3 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1350px ;
-    }
-    
-    .Translate4 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1930px ;
-    }
-    
-    .Translate5 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2190px ;
-    }
-    
-    .Translate6 {
-        /* MODIFIE */
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2500px ;
     }
     
     .date{
