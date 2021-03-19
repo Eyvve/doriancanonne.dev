@@ -79,10 +79,12 @@ var avatar = document.querySelector("#avatar")
 
 boutoncv.addEventListener("mouseover", function(){
     avatar.classList.remove("avatartransitionout")
+    avatar.src = "Images/avatar.png"
     avatar.classList.add("avatartransitionover")
 })
 
 boutoncv.addEventListener("mouseout", function(){
     avatar.classList.remove("avatartransitionover")
+    avatar.src = "Images/avatar_armsup.png"
     avatar.classList.add("avatartransitionout")
 })
