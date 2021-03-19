@@ -1,4 +1,5 @@
 console.log(window.devicePixelRatio)
+ 
 
 var html = document.getElementsByName("html")
 
@@ -273,6 +274,7 @@ function slide_left(){
             txt1.style.display = "none"
             txt0.style.display = "block"
             edgecheckleft = true
+            edgecheckright = false
         }
     }
     console.log(position)

@@ -185,6 +185,75 @@ main{
     left: -74% ;
 }
 
+.mapbackground{
+    position: absolute;
+    height: 87vh;
+    left: 0;
+}
+
+.TranslateBG0{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: 0px ;
+}
+
+.TranslateBG1{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -20% ;
+}
+
+.TranslateBG2{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -40% ;
+}
+
+.TranslateBG3{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -60% ;
+}
+
+.TranslateBG4{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -80% ;
+}
+
+.TranslateBG5{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -90% ;
+}
+
+.TranslateBG6{
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+    transition: 3s;
+    left: -100% ;
+}
+
 .datetxt{
     font-size: 30px;
     grid-area: date ; 
@@ -304,75 +373,6 @@ footer{
 
 @media screen and (max-resolution: 100dpi) and (min-width: 2000px){
 
-    .mapbackground{
-        position: absolute;
-        height: 87vh;
-        left: 0;
-    }
-
-    .TranslateBG0{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: 0px ;
-    }
-    
-    .TranslateBG1{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -400px ;
-    }
-    
-    .TranslateBG2{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -800px ;
-    }
-    
-    .TranslateBG3{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1200px ;
-    }
-    
-    .TranslateBG4{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1600px ;
-    }
-    
-    .TranslateBG5{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1800px ;
-    }
-    
-    .TranslateBG6{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2100px ;
-    }
-
     .avatar{
         /* MODIFIE */
         position : absolute;
@@ -436,75 +436,6 @@ footer{
 }
 
 @media screen and (max-resolution: 100dpi) and (max-width: 2000px ){
-    
-    .mapbackground{
-        position: absolute;
-        height: 87vh;
-        left: 0;
-    }
-
-    .TranslateBG0{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: 0px ;
-    }
-    
-    .TranslateBG1{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -400px ;
-    }
-    
-    .TranslateBG2{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -800px ;
-    }
-    
-    .TranslateBG3{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1200px ;
-    }
-    
-    .TranslateBG4{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1600px ;
-    }
-    
-    .TranslateBG5{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1800px ;
-    }
-    
-    .TranslateBG6{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -2100px ;
-    }
 
     .avatar{
         /* MODIFIE */
@@ -573,75 +504,6 @@ footer{
 
 
 @media(min-resolution: 100dpi){
-    
-    .mapbackground{
-        position: absolute;
-        height: 87vh;
-        left: 0;
-    }
-
-    .TranslateBG0{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: 0px ;
-    }
-    
-    .TranslateBG1{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -300px ;
-    }
-    
-    .TranslateBG2{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -600px ;
-    }
-    
-    .TranslateBG3{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -900px ;
-    }
-    
-    .TranslateBG4{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1200px ;
-    }
-    
-    .TranslateBG5{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1400px ;
-    }
-    
-    .TranslateBG6{
-        -webkit-transition: 3s;
-        -moz-transition: 3s;
-        -ms-transition: 3s;
-        -o-transition: 3s;
-        transition: 3s;
-        left: -1800px ;
-    }
 
     .avatar{
         /* MODIFIE */
