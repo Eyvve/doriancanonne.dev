@@ -302,6 +302,10 @@ leftbutton.addEventListener("click", function(){
         img1.src = ""
         img2.src = ""
         img3.src = ""
+        // waiting for screens to show
+        img1.style.display = "none"
+        img2.style.display = "none"
+        img3.style.display = "none"
     }
     setTimeout(() => {  window.location.href = "#anchordescription"; }, 0);
     
