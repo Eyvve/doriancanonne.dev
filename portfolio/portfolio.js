@@ -199,7 +199,7 @@ leftarrow.addEventListener("click", function(){
         timelineindicator.classList.remove("horizTranslate2")
         timelineindicator.classList.add("horizTranslate1")
         timelineindicator.style.left = "150px"
-        date.innerHTML = "Fevrier 2021"
+        date.innerHTML = "Février 2021"
         projectname.innerHTML = "Hetic MiniGames"
         projectlanguages.src = "../Images/HMG_language.svg"
         rightbutton.src = "../Images/Visit_button.svg"
