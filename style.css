@@ -121,6 +121,31 @@ background-size: 100%;
     color: #AAA;
 } */
 
+.avatar{
+    position: relative;
+    width: 10%;
+    top: 15%;
+    left: 50%;
+}
+
+.avatartransitionover{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    top: 5vh ;
+}
+
+.avatartransitionout{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    top: 500px ;
+}
+
 .bottomnav{
     z-index: 10000;
     position: sticky;
@@ -187,6 +212,17 @@ background-size: 100%;
     width: 33px;
 }
 
+@media(max-resolution: 100dpi) and (min-width: 2000px){
+    .avatartransitionover{
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        top: 10vh ;
+    } 
+}
+
 @media(min-resolution: 100dpi){
     .span{
         font-weight: 550;
@@ -222,6 +258,15 @@ background-size: 100%;
         transition: 0.3s ease;
         color: #2E4057;
         margin-bottom: 60px;
+    }
+    
+    .avatartransitionover{
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        top: 10vh ;
     }
 }
 

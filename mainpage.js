@@ -72,3 +72,17 @@ github.addEventListener("mouseout", function() {
     console.log("checkout")
     githubtxt.innerHTML = ""
 })
+
+var boutoncv = document.querySelector("#bouton_cv")
+
+var avatar = document.querySelector("#avatar")
+
+boutoncv.addEventListener("mouseover", function(){
+    avatar.classList.remove("avatartransitionout")
+    avatar.classList.add("avatartransitionover")
+})
+
+boutoncv.addEventListener("mouseout", function(){
+    avatar.classList.remove("avatartransitionover")
+    avatar.classList.add("avatartransitionout")
+})
