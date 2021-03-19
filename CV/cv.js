@@ -87,6 +87,25 @@ rightbutton.addEventListener("click", slide_right, false)
 var edgecheckleft = true
 var edgecheckright = false
 
+function animationclearing(){
+    mapslider.classList.remove("Translate0")
+    mapbackground.classList.remove("TranslateBG0")
+    mapslider.classList.remove("Translate1")
+    mapbackground.classList.remove("TranslateBG1")
+    mapslider.classList.remove("Translate2")
+    mapbackground.classList.remove("TranslateBG2")
+    mapslider.classList.remove("Translate3")
+    mapbackground.classList.remove("TranslateBG3")
+    mapslider.classList.remove("Translate4")
+    mapbackground.classList.remove("TranslateBG4")
+    mapslider.classList.remove("Translate5")
+    mapbackground.classList.remove("TranslateBG5")
+    mapslider.classList.remove("Translate6")
+    mapbackground.classList.remove("TranslateBG6")
+}
+    
+
+
 function slide_right(){
     console.log("go right")
     position = position + 1
@@ -95,6 +114,7 @@ function slide_right(){
     }
     if(edgecheckright == false){
         if(position == 0){
+            edgecheckleft = false
             edgecheckright = false
             mapslider.classList.add("Translate0")
             mapbackground.classList.add("TranslateBG0")
@@ -103,6 +123,7 @@ function slide_right(){
             txt0.style.display = "block"
         }
         else if(position == 1){
+            edgecheckright = false
             edgecheckleft = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate0")
@@ -116,6 +137,8 @@ function slide_right(){
             txt1.style.display = "block"
         }
         else if(position == 2){
+            edgecheckleft = false
+            edgecheckright = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate1")
             mapbackground.classList.remove("TranslateBG1")
@@ -128,6 +151,8 @@ function slide_right(){
             txt2.style.display = "block"
         }
         else if(position == 3){
+            edgecheckleft = false
+            edgecheckright = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate2")
             mapbackground.classList.remove("TranslateBG2")
@@ -140,6 +165,8 @@ function slide_right(){
             txt3.style.display = "block"
         }
         else if(position == 4){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate3")
             mapbackground.classList.remove("TranslateBG3")
@@ -152,6 +179,8 @@ function slide_right(){
             txt4.style.display = "block"
         }
         else if(position == 5){
+            edgecheckleft = false
+            edgecheckright = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate4")
             mapbackground.classList.remove("TranslateBG4")
@@ -164,6 +193,8 @@ function slide_right(){
             txt5.style.display = "block"
         }
         else if(position == 6){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated.gif"
             mapslider.classList.remove("Translate5")
             mapbackground.classList.remove("TranslateBG5")
@@ -176,6 +207,9 @@ function slide_right(){
             txt6.style.display = "block"
             edgecheckright = true
         }
+    }
+    else{
+        console.log("stuck left")
     }
     console.log(position)
 }
@@ -191,6 +225,7 @@ function slide_left(){
     if(edgecheckleft == false){
         if(position == 6){
             edgecheckleft = false
+            edgecheckright = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate5")
             mapbackground.classList.remove("TranslateBG5")
@@ -203,6 +238,8 @@ function slide_left(){
             txt6.style.display = "block"
         }
         else if(position == 5){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate6")
             mapbackground.classList.remove("TranslateBG6")
@@ -215,6 +252,8 @@ function slide_left(){
             txt5.style.display = "block"
         }
         else if(position == 4){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate5")
             mapbackground.classList.remove("TranslateBG5")
@@ -227,6 +266,8 @@ function slide_left(){
             txt4.style.display = "block"
         }
         else if(position == 3){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate4")
             mapbackground.classList.remove("TranslateBG4")
@@ -239,6 +280,8 @@ function slide_left(){
             txt3.style.display = "block"
         }
         else if(position == 2){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate3")
             mapbackground.classList.remove("TranslateBG3")
@@ -251,6 +294,8 @@ function slide_left(){
             txt2.style.display = "block"
         }
         else if(position == 1){
+            edgecheckright = false
+            edgecheckleft = false
             avatar.src = "../Images/avatar_animated_reversed.gif"
             mapslider.classList.remove("Translate2")
             mapbackground.classList.remove("TranslateBG2")
@@ -274,8 +319,10 @@ function slide_left(){
             txt1.style.display = "none"
             txt0.style.display = "block"
             edgecheckleft = true
-            edgecheckright = false
         }
+    }
+    else{
+        console.log("stuck left")
     }
     console.log(position)
 }
