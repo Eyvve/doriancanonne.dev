@@ -50,6 +50,7 @@ img{
     font-size: 150px;
     max-width: 35vw;
     color: #2E4057;
+    cursor: default;
 }
 
 .small{
