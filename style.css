@@ -29,6 +29,7 @@ img{
     width: 70%;
     height: 60vh;
     font-family: 'Red Hat Display', sans-serif;
+    line-height: 10rem;
 }
 
 .span{
@@ -46,7 +47,7 @@ img{
     top: 15%;
     left: -40%;
     align-self: center;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
     font-size: 150px;
     max-width: 35vw;
     color: #2E4057;
@@ -55,6 +56,8 @@ img{
 
 .small{
     font-size: 40px;
+    position: relative;
+    left : 30px;
     animation: fadeinrole 3s;
     -moz-animation: fadeinnamerole 3s;
     -webkit-animation: fadeinnamerole 3s;
