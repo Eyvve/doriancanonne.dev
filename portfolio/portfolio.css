@@ -368,7 +368,7 @@ footer{
         grid-area: ProjectImage; 
         position: relative;
         top: 12%;
-        left: 1690px ;
+        left: 1640px ;
         height: 250px;
         justify-self: center;
         overflow: hidden;
@@ -381,7 +381,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 1690px ;
+        left: 1640px ;
         filter: blur(1px);
     }
     
@@ -392,7 +392,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 0px ;
+        left: -20px ;
         filter: blur(1px);
     }
     
@@ -477,7 +477,7 @@ footer{
         grid-area: ProjectImage; 
         position: relative;
         top: 5%;
-        left: 1540px ;
+        left: 1300px ;
         height: 235.25px;
         justify-self: center;
         overflow: hidden;
@@ -586,7 +586,7 @@ footer{
         grid-area: ProjectImage; 
         position: relative;
         top: 12%;
-        left: 1220px ;
+        left: 1180px ;
         height: 180px;
         justify-self: center;
         overflow: hidden;
@@ -599,7 +599,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 1220px ;
+        left: 1180px ;
         filter: blur(1px);
     }
     
@@ -610,7 +610,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 0px ;
+        left: -20px ;
         filter: blur(1px);
     }
     
