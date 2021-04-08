@@ -155,7 +155,7 @@ rightarrow.addEventListener("click", function(){
         timelineindicator.classList.add("horizTranslate2")
         timelineindicator.style.left = "250px"
         date.innerHTML = "Avril 2021"
-        projectname.innerHTML = "Magical Mystery Page"
+        projectname.innerHTML = "Citypop Discovery"
         projectlanguages.src = "../Images/MMP_language.svg"
         rightbutton.src = "../Images/Coming_Soon_button.svg"
         rightbuttonlink.href = ""
@@ -214,7 +214,7 @@ leftarrow.addEventListener("click", function(){
         timelineindicator.classList.add("horizTranslate2")
         timelineindicator.style.left = "250px"
         date.innerHTML = "Avril 2021"
-        projectname.innerHTML = "Magical Mystery Page"
+        projectname.innerHTML = "Citypop Discovery"
         projectlanguages.src = "../Images/MMP_language.svg"
         rightbutton.src = "../Images/Coming_Soon_button.svg"
         rightbuttonlink.href = ""
@@ -295,7 +295,7 @@ leftbutton.addEventListener("click", function(){
         img3.src = "../Images/HMG_S3.png"
     }
     if(position == 2){
-        description_logo.src = "../Images/MMP_png.png"
+        description_logo.src = "../Images/CTPD.svg"
         description_txt1.style.display = "none"
         description_txt2.style.display = "none"
         description_txt3.style.display = "block"

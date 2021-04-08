@@ -477,7 +477,7 @@ footer{
         grid-area: ProjectImage; 
         position: relative;
         top: 5%;
-        left: 1585px ;
+        left: 1540px ;
         height: 235.25px;
         justify-self: center;
         overflow: hidden;
@@ -490,7 +490,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 1585px ;
+        left: 1540px ;
         filter: blur(1px);
     }
     
@@ -501,7 +501,7 @@ footer{
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s;
-        left: 0px ;
+        left: -20px ;
         filter: blur(1px);
     }
     
