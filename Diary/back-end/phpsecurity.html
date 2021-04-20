@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>dc.dev | Protéger son code php</title>
+    <link rel="stylesheet" href="phpsecurity.css">
+    <link rel="stylesheet" href="../../Bibliothèques/prism.css">
+    <link rel="icon" type="image/png" href="../Images/logo.png">
+    <link rel="preload" href="phpsecurity.css" as="style">
+    <link rel="preload" href="phpsecurity.js" as="script">
+</head>
+<body>
+    <header>
+        <nav class="headernav">
+            <a href="../../index.html"><div class="title">DORIANCANONNE.DEV</div></a>
+            <!-- <img class="flag" src="Images/frenchflag.png" alt="French language"> -->
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <img class="banner" src="../../Images/phpbanner.png">
+                <h1 class="center">Back-end : Sécuriser son code PhP</h1>
+                <hr>
+                <p><br><em>
+                    J’ai un souci.
+                    <br><br>
+                    J’apprends le PHP en ce moment mais parmi tous les sujets liés à ce langage, 
+                    les notions de sécurité n’entrent pas. Voulant bien faire, 
+                    j’ai décidé de centraliser dans ce premier article un maximum d’informations 
+                    à savoir si on veut avoir un code propre et sécurisé. 
+                    J’ai donc fait mes petites recherches et regroupé plusieurs soucis ainsi que leurs solutions.<br>
+                    <br><br>
+                    bonne lecture.</em>
+                    <br><br>
+                </p>
+                <!-- <p class="center">
+                    <br><br><br>
+                    <b>Que fais-je ici alors ?</b>
+                    <br><br><br>
+                </p> -->
+                <p>
+                    Protéger son code PHP est nécessaire si on veut laisser vivre son site sans s'inquiéter comme 
+                    lorsqu'on se demande si on a bien fermé le gaz avant de partir.<br>
+                    Il est donc obligatoire d'avoir la conscience tranquille et cela implique d'être un poil paranoïaque.
+                    Donc dans cet article, nous passerons en revue les résultats de mes recherches sur la sécurité en PHP et 
+                    expliquant un maximum chaque étape de chaque processus.<br>
+                    Vous trouverez sûrement des grosses similitudes avec certains autres articles sur internet, 
+                    mais ne pouvant pas sortir toutes ces informations de ma tête, 
+                    je me cantonne à la centralisation d’informations au sein d’un seul article et je décris un maximum chaque action. 
+                    Les sources seront bien entendu listées.<br><br>
+                </p>
+                <h2>Ne faire confiance à rien venant de l'extérieur</h2><br>
+                <p>
+                    Il y a une multitude de raisons de se méfier des inputs venant de l’utilisateur. 
+                    Qu’il soit mal intentionné ou simplement maladroit, si son action impacte le site ou la base de données, 
+                    c’est malheureusement de notre faute.<br>
+                    Partons alors du principe que chaque utilisateur est un Elliot Alderson en puissance.<br><br>
+                    Il est donc nécessaire d’appliquer certaines règles et de savoir quelles parties du code sont sensibles.<br><br>
+                </p>
+                <h3>
+                    > Via la sécurisation des entrées des formulaires
+                </h3>
+                <p>
+                    Les formulaires font partie des éléments les plus exposés. Une erreur et l’utilisateur peut faire passer 
+                    tout ce qu’il souhaite dans notre code. <br>
+                    Le premier réflexe à avoir est alors de forcer l’utilisateur à remplir tous les champs avec le paramètre <a href="https://www.w3schools.com/tags/att_input_required.asp" target="_blank">required</a>. <br><br>
+                    C’est le premier niveau de sécurité.<br>
+                </p>
+                <pre><code class="language-html">&lt;form id="form" action="#" method="post"&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="email" id="email" required&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="password" name="password" id="password" required&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="submit" name="submit" id="submit" value="Log in"&gt;
+    &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+
+                <p>
+                    Malheureusement, un simple <a href="https://fr.wikipedia.org/wiki/Firebug" target="_blank">firebug</a> peut exploser votre maigre protection. 
+                    Il est donc nécessaire de valider les données côté serveur. 
+                </p>
+
+                <br><img class="centerimg" src="../../Images/gifSNK.gif" alt="gif du titan blindé qui éclate le mur maria dans l'attaque des titans">
+                <br>
+                <p>
+                    Une protection aussi simple n’étant pas parfaite, nous devons valider chaque entrée. 
+                    Pour éviter de nous prendre la tête dessus, nous pouvons par exemple créer une classe 
+                    chargée de valider chaque input du formulaire.<br>
+                    Nous allons reprendre la classe de l’article de lije-creative disponible <a href="https://www.lije-creative.com/script-php-faille/" target="_blank">ici</a>, 
+                    sobrement appelée Validation.
+                </p>
+                <br>
+                <pre><code class="language-php">&lt;?php
+                
+    class Validation{
+
+        public $errors = array();
+
+        public function validate($data, $rules){
+
+            $valid = true;
+
+            foreach($rules as $fieldname => $rule){
+                $callbacks = explode("|", $rule);
+
+                foreach($callbacks as $callback){
+                    $value = isset($data[$fieldname]) ? $data[$fieldname] : null;
+                    if($this->$callback($value, $fieldname) == false) $valid = false;
+                }
+            }
+
+            return $valid;
+        }
+
+        public function email($value, $fieldname){
+
+            $valid = filter_var($value, FILTER_VALIDATE_EMAIL);
+            if($valid == false) $this->errors[] = "$fieldname doit &ecirc;tre un email valide";
+            return $value;
+
+        }
+
+        public function required($value, $fieldname){
+
+            $valid = !empty($value);
+            if($valid == false) $this->errors[] = "$fieldname est obligatoire";
+            return $value;
+
+        }
+}
+                </code></pre>
+                <br>
+                <p>Toutes les entrées vont d’abord passer par la fonction validate() prenant en paramètres :</p>
+                <ul>
+                    <li>$data, stockant la donnée $_POST donc les entrées de formulaire en POST</li>
+                    <li>$rules, étant un descriptif des règles de l’input, il en existe 2 dans notre classe : email et required, 
+                        vérifiant individuellement chaque règle.</li>
+                </ul>
+                <br>
+                <p>
+                    Toujours dans la fonction validate(), on crée une variable $valid, true si tout va bien, false si il y a une erreur.<br>
+                    Directement après nous avons une boucle foreach décortiquant la variable $rules pour y récupérer chaque règle afin de les vérifier individuellement. 
+                    La variable étant un <a href="https://www.php.net/manual/fr/language.types.array.php" target="_blank">tableau</a>, on extrait pour chaque $rules la clé (ici $fieldname) et la valeur (ici $rule) dans la forme $fieldname => $rule, 
+                    et on stocke ces informations dans $callbacks.
+                </p>
+                <p>
+                    Dans cette même boucle foreach on refait une boucle foreach pour vérifier chaque $callback de $callbacks (c.a.d les règles de l’input). On utilise alors une <a href="http://www.manuelphp.com/php/language.operators.comparison.ternary.php" target="_blank">opération ternaire</a>:
+                </p>
+                <ul>
+                    <li>On interroge l’existence de $data et de $fieldname dans la variable $value</li>
+                    <li>Si la variable est validée, alors on autorise $data[$fieldname] comme valeur de $value</li>
+                    <li>Sinon on assigne null à $value</li>
+                </ul>
+                <br>
+                <p>
+                    On teste alors le résultat de cette opération ternaire avec une condition if:
+                </p>
+                <ul>
+                    <li>Si la fonction $callback($value, $fieldname) (étant les fonctions email() et required()) est false, $valid devient false.</li>
+                    <li>Sinon, on ne touche pas à $valid donc elle reste $true et l’input est validé.</li>
+                    <li>On retourne alors $valid.</li>
+                </ul>
+                <br>
+                <p>
+                    La class Validation permet aussi de filtrer et valider les règles indépendamment, dans notre exemple il s’agit de email pour le champ 
+                    du même nom et required que l’on est censé déjà avoir attribué à tous les inputs. Les deux fonctionnent plus ou moins de la même manière :
+                </p>
+                <ul>
+                    <li>Pour la règle email la fonction email($value, $fieldname) récupère la valeur pour la filtrer selon le filtre de validation d’email FILTER_VALIDATE_EMAIL 
+                        et la stocke dans $valid. Si $valid est false, on envoie un message d’erreur et on retourne la valeur.</li>
+                    <li>Pour la règle required, la fonction required($value, $fieldname) teste simplement si le champ est vide, et renvoie une erreur si c’est le cas. 
+                        On retourne ensuite la valeur.</li>
+                </ul>
+                <p>En résumé on a donc dans cette classe à la fois le filtrage des inputs mais aussi une vérification de chaque règle, en obligeant un required donc protégeant de la faille vue en début de l’article.</p>
+                <p>Il est aussi possible de renforcer cette sécurité en y intégrant des limitations pour les inputs de type “text” avec l’interdiction de certains caractères avec la fonction <a href="https://www.php.net/preg_match" target="_blank">preg_match</a>.</p>
+                <h3>
+                    > Via la protection face aux failles XSS
+                </h3>
+                <p>
+                    Le XSS est une faille présente dans beaucoup de sites. Ne pas s’en protéger peut entraîner une injection de code Javascript qui n’a pas pour but d’être bienveillant. <br>
+                    Pour s’en prémunir, le minimum serait de convertir les guillemets simples et doubles avec la fonction htmlentities($string, ENT_QUOTES) 
+                </p>
+                <pre><code class="language-php">&lt;?php
+$string = "Un je suis un \'apostrophe\' en <strong>gras</strong>"
+
+echo htmlentities($string);
+// Résultat : "Je suis un 'apostrophe' en $lt;strong$gt;gras$lt;/strong$gt;"
+
+echo htmlentities($string, ENT_QUOTES);
+// Résultat : "Je suis un $#039;apostrophe$#039 en $lt;strong$gt;gras$lt;/strong$gt"
+
+// les "&" sont remplacés par des "$" pour éviter la conversion des entités html avec prismJS</code></pre>
+                <br>
+                <p>
+                    On peut aussi, en plus de la conversion des guillemets en entités html, filtrer certains caractères spéciaux comme vu précédemment avec la fonction preg_match. <br>
+                    Pour faciliter l’application de ces filtres, on peut créer des variables $whitelist et $blacklist afin de filtrer d’un côté ce que l’on accepte, et de l’autre ce que l’on refuse.
+                </p>
+                <p>
+                    Vu qu’on est jamais trop prudent, autant blacklister le “NULL” ainsi que le “/”, pour pouvoir dormir sur ses deux oreilles. 
+                </p>
+                <p>
+                    Si vous souhaitez tout de même intégrer des guillemets dans vos inputs comme vu dans l'exemple ci-dessus, je vous conseille de vous intéresser de près aux magic_quotes 
+                    et à leur utilisation ainsi qu'à leur désactivation. Un super article résume tout <a href="https://pub.phyks.me/sdz/sdz/les-magic-quotes-ou-guillemets-magiques.html" target="_blank">ici</a>.
+                </p>
+                <h3>
+                    > Via la sécurisation des variables afin d’éviter les injections
+                </h3>
+                <p>
+                    Ce serait quand même ballot que quelqu’un vienne écrire du code SQL et mettre le bazar dans votre base de donnée, on est d’accord. C’est pour ça qu’il est crucial de ne jamais 
+                    mettre directement ses variables PHP dans sa requête SQL comme dans l’exemple suivant :
+                </p>
+                <pre><code class="language-php">SELECT title, description, length, film_id FROM film 
+WHERE film_id = $id</code></pre>
+                <p>En effet, la variable $id mise brutalement comme ceci fait un lien direct avec un input externe, et un simple “drop table” bien placé tue une de vos tables sans efforts.<br>
+                    La variable $id en question est directement liée à l’input GET donc on peut injecter le code directement dans l’URL. Pour cela nous devons détourner nos variables à travers une table.
+                    La variable devient la clé et la valeur devient sa valeur.<br>
+                    Ensuite il ne nous reste qu'à fetch normalement en appelant la requête ! (bien entendu la variable $id est filtrée à l’entrée comme un INT.)<br>
+                </p>
+                <pre><code class="language-php">&lt;?php
+$pdo = new PDO("wysql:host=localhost:3306;dbname=sakila", "root", "", [
+PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+]);
+$id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT ) ;
+ 
+if(!$id){
+    echo "400 BAD REQUEST";
+    http_response_code(400);
+    exit();
+};
+
+$stmt = $pdo->prepare("SELECT title, description, length, film_id FROM film WHERE film_id = :id");
+ 
+
+$stmt->execute([":id" => $id]);
+ 
+$films = $stmt->fetch(PDO::FETCH_ASSOC);
+ 
+ 
+if($film = false){
+    echo "400 BAD REQUEST";
+    http_response_code(400);
+    exit();
+};
+
+                </code></pre>
+                <h4>Le cas de l’OS Injection</h4>
+                <p>L’OS injection est un cas très particulier d’injection car il utilise la fonction system. Cette fonction peut être très dangereuse si mal utilisée. 
+                    Donc par soucis de légitime paranoïa, il est tout simplement conseillé de ne jamais utiliser la fonction <a href="https://www.php.net/manual/fr/function.system.php" target="_blank">system()</a>.</p>
+                <h3>
+                    > Via la protection contre le détournement de session
+                </h3>
+                <p>
+                    Il est possible qu’un pirate ait accès à vos identifiants, ça arrive, et on ne peut malheureusement pas y faire grand chose. 
+                    Si notre session n’est pas liée à notre adresse IP réelle, là ça pose un vrai problème. Tout d’abord parce qu’on se fait voler notre session (pas cool) 
+                    mais aussi qu’on risque de ne pas s’en rendre compte (vraiment pas cool).<br> 
+                    Même si les informations de sessions sont disponibles, le pirate peut tout de même valider la session via une requête au serveur ou en utilisant la variable 
+                    <a href="https://www.php.net/manual/fr/reserved.variables.session.php" target="_blank">$_SESSION.</a>
+                </p>
+                <p>
+                    Il est donc nécessaire de lier sa session à son adresse IP réelle, pour éviter toute attaque venant de l'extérieur.
+                </p>
+                <h3>
+                    > Via l’ajout d’une protection anti bot
+                </h3>
+                <p>
+                    cURL est un framework php permettant à l’utilisateur de faire des requêtes URL uniquement par lignes de commandes, donc sans navigateur. 
+                    Il est souvent détourné pour éviter les sécurités côté client.
+                </p>
+                <p>
+                    Pour éviter ce soucis, le mieux est de mettre un captcha lors de la soumission du formulaire, évitant alors toute tentative de connexion par bot ou tout simplement sans navigateur.
+                </p>
+                <br><img class="centerimg" src="../../Images/captcha.gif" alt="gif du titan blindé qui éclate le mur maria dans l'attaque des titans">
+                <h3>
+                    > Via le certificat SSL
+                </h3>
+                <p>
+                    Ça peut paraître bête dit comme ça mais un certificat HTTPS vous protège dans la transmission de données entre le client et le serveur. 
+                    Il peut toujours être utile de s’intéresser de près à ces protocoles, mais vu que ce n’est pas le sujet de l’article, 
+                    je me permets de vous glisser quelques liens intéressants sur le sujet :
+                </p>
+                <ul>
+                    <li><a href="https://www.certeurope.fr/blog/tout-savoir-sur-les-certificats-ssl/" target="_blank">https://www.certeurope.fr/blog/tout-savoir-sur-les-certificats-ssl/</a></li>
+                    <li><a href="https://www.ionos.fr/digitalguide/sites-internet/creation-de-sites-internet/certificat-ssl/" target="_blank">https://www.ionos.fr/digitalguide/sites-internet/creation-de-sites-internet/certificat-ssl/</a></li>
+                </ul>
+                <br><br>
+                <div class="encart">
+                    <p>
+                        En résumé :<br>
+                        Se protéger côté PhP n’est donc pas une tâche impossible, le principal est donc de savoir où sont les failles et s’assurer que tous ces 
+                        potentiels exploits soient appréhendés. Le minimum se résume alors à :
+                    </p><br>
+                    <ul>
+                        <li>Garder en tête qu’on ne peut pas faire confiance à l’utilisateur</li>
+                        <li>Toujours filtrer et valider les informations venant de l'extérieur</li>
+                        <li>Ne jamais utiliser les variables PhP directement dans sa requête SQL</li>
+                        <li>Bannir les caractères dangereux</li>
+                        <li>Eviter un maximum la fonction system()</li>
+                        <li>Ajouter des captchas dans les formulaires</li>
+                        <li>Lier sa session à son IP réelle</li>
+                        <li>Lier son site à un certificat HTTPS</li>
+                    </ul>
+                </div>
+                <p>J’espère que ce premier article vous aura appris quelque chose et / ou aidé à mieux saisir les failles facilement évitables en Php. </p>
+                <br><hr><br>
+                <p>
+                    Sources :<br>
+                    <a href="https://www.lije-creative.com/script-php-faille/" target="_blank">https://www.lije-creative.com/script-php-faille/</a><br>
+                    <a href="https://geekflare.com/fr/php-site-security-tips/" target="_blank">https://geekflare.com/fr/php-site-security-tips/</a><br>
+                    <a href="https://apprendre-la-programmation.net/securiser-formulaires/" target="_blank">https://apprendre-la-programmation.net/securiser-formulaires/</a><br>
+                    <a href="https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/securiser-valider-formulaire/" target="_blank"><https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/securiser-valider-formulaire//a><br>
+
+                </p>
+                
+            </div>
+        </div>
+        <nav class="bottomnav">
+            <a id="help" class="help" href="Apropos.html"><img class="icon" src="../../Images/question.svg" alt="bouton à propos"></img></a>
+            <a  id="linkedin"class="linkedin" href="https://www.linkedin.com/in/dorian-canonne/" target="_blank"><img class="icon" src="../../Images/linkedin.svg" alt="bouton linkedin"></img></a>
+            <a id="github" class="github" href="https://github.com/Eyvve" target="_blank"><img class="icon" src="../../Images/mark-github-24.svg" alt="bouton github"></img></a>
+            
+            <div id="helptxt" class="helptxt"></div>
+            <div id="linkedintxt" class="linkedintxt"></div>
+            <div id="githubtxt" class="githubtxt"></div>
+        </nav> 
+    </main>
+    <footer>
+        <div class="mark"><p>Dorian Canonne | Contact : dorian.canonne@hetic.net</p></div>
+    </footer>
+    <script type="text/javascript" src="phpsecurity.js"></script>
+    <script type="text/javascript" src="../../Bibliothèques/prism.js"></script>

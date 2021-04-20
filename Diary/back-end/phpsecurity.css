@@ -1,0 +1,304 @@
+html{
+    background-color: #DED9D4;
+    color: #2E4057;
+    font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+img{
+    user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    -webkit-user-drag: none; 
+    -webkit-user-select: none; 
+    -moz-user-drag: none;
+}
+
+hr{
+    width: 80%;
+}
+
+.banner{
+    width: 100%;
+}
+
+h1{
+    position: relative;
+    margin: 0 auto;
+    top: -40px;
+    font-size: 30px;
+    color: #F8F8F8;
+    background: #2E4057;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 65px;
+    width: 520px;
+    line-height: 4rem;
+    
+}
+
+p{
+    color: #2E4057;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+
+.center{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.centerimg{
+    position: relative;
+    left: 25%;
+    width: 50%;
+}
+
+body{
+    backdrop-filter: blur(3px);
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+
+a{
+    /* text-decoration:none; */
+    color: rgb(211, 113, 1);
+}
+
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+.headernav{
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: " menup " " submenu1 ";
+}
+
+.title{
+    display: inline-block;
+    grid-area: menup;
+    width: 235px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #2E4057;
+    padding-left: 70px;
+}
+
+.title:hover{
+    color: #AAA;
+}
+
+.submenu1{
+    grid-area: submenu1;
+    font-size: 18px;
+    margin-left: 80px;
+    line-height: 1.8em;
+}
+
+.flag{
+    padding-right: 90px;
+    align-self: center;
+    grid-area: flag;
+}
+
+main{
+    z-index: 100;
+}
+
+.container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto 900px auto;
+    grid-template-rows: auto;
+    grid-template-areas: " leftspace content . ";
+}
+
+.content{
+    background-color: #FFF;
+    padding-bottom: 100px;
+    padding: 30px;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid #555; */
+    border-radius: 15px;
+    /* box-shadow: inset 0 0px 10px  #111; */
+}
+
+.encart{
+    width: 85%;
+    position: relative;
+    margin: 0 auto;
+    background: rgba(46, 64, 87, 0.09);
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.encart>*{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.mark{
+    width: 100%;
+    height: 25px;
+    background: #2E4057;
+    position: relative;
+    bottom: -150px;
+    
+}
+
+.mark>p{
+    color: white;
+    z-index: 100;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    line-height: 1.6rem;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+
+.red{
+    color: #FF3366;
+}
+
+
+footer{
+    z-index: 100000;
+}
+
+.bottomnav{
+    z-index: 10000;
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 60px;
+    right: 40px;
+    float: right;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "detailhelp helpB"
+    "detaillink linkedin"
+    "detailgit github";
+}
+
+.help { 
+    grid-area: helpB; 
+    justify-self: center;
+    align-self: center;
+
+}
+
+.linkedin { 
+    grid-area: linkedin; 
+    justify-self: center;
+    align-self: center;
+}
+
+.github { 
+    grid-area: github; 
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.helptxt { 
+    grid-area: detailhelp; 
+    justify-self: center;
+    align-self: center;
+    width: 85px;
+    height: 33px;
+    /* display: none; */
+
+}
+
+.linkedintxt { 
+    grid-area: detaillink; 
+    justify-self: center;
+    align-self: center;
+    width: 85px;
+    height: 33px;
+    /* display: none; */
+}
+
+.githubtxt { 
+    grid-area: detailgit; 
+    justify-self: center;
+    align-self: center;
+    width: 85px;
+    height: 33px;
+    /* display: none; */
+}
+
+.icon{
+    height: 33px;
+    width: 33px;
+}
+
+@media(min-resolution: 100dpi){
+    p{
+        font-size: 18px;
+    }
+
+    .container{
+        grid-template-columns: auto 750px auto;
+    }
+}
+    
+/* FADEIN */
+
+.smoothtransition{
+    animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s;
+    -webkit-animation: fadein 0.3s;
+    -o-animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
