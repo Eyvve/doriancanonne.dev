@@ -1,3 +1,21 @@
+var menu = document.getElementById("menu")
+var navbar = document.getElementById("navbar")
+var opened = false
+menu.addEventListener("click", function(){
+    if (opened == false){
+        navbar.style.display = "block"
+        opened = true
+        console.log(opened)
+    }
+    else if(opened == true){
+        navbar.style.display = "none"
+        opened = false
+        console.log(opened)
+    }
+
+})
+
+
 var help = document.querySelector("#help")
 help.addEventListener("mouseover", function() {
     var helptxt = document.getElementById("helptxt")

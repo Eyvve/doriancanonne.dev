@@ -45,6 +45,7 @@ p{
     text-align: center;
     position: relative;
     margin: 0 auto;
+    /* z-index: 150; */
 }
 
 .centerimg{
@@ -69,12 +70,14 @@ header{
     position: sticky;
     position: -webkit-sticky;
     top: 0px;
+    z-index: 1000000;
 }
 
 .headernav{
     width: 100%;
     padding-top: 35px;
     padding-bottom: 35px;
+    z-index: 1000000;
 
 }
 
@@ -85,6 +88,25 @@ header{
     grid-template-areas: " menup " " submenu1 ";
 }
 
+.menu{
+    position: absolute;
+    right: 3.5%;
+    top: 35px;
+    display: none;
+}
+
+.chevron{
+    list-style-type: ">";
+    padding-left: 20px;
+    line-height: 1.8rem;
+}
+
+.navbar{
+    position: relative;
+    left: 63px;
+}
+
+
 .title{
     display: inline-block;
     grid-area: menup;
@@ -93,6 +115,7 @@ header{
     font-weight: 500;
     color: #2E4057;
     padding-left: 70px;
+    z-index: 1000;
 }
 
 .title:hover{
@@ -313,29 +336,67 @@ footer{
         color: #DED9D4;
         height: 45px;
         line-height: 2em;
+        padding-left: 50px;
+        padding-right: 55px;
     }
+    
+    .menu{
+        display: block;
+    }
+
+    .navbar{
+        background-color: #2E4057;
+        position: absolute;
+        height: auto;
+        width: 305px;
+        left: 0px;
+        top: 78px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 10px;
+        display: none;
+    }
+
+    .chevron{
+        color: #DED9D4;
+        font-size: 22px;
+        line-height: 2em;
+    }
+
     .center{
         height: auto;
     }
+
+    img{
+        z-index: 0;
+    }
+
     h1{
         font-size: 40px;
     }
+
     h2{
         font-size: 38px;
     }
+
     h3{
         font-size: 35px;
     }
+
     h4{
         font-size: 30px;
     }
+
     p{
         font-size: 28px;
     }
+
     .mark{
         height: 50px;
         bottom: -160px;
     }
+
     .mark>p{
         font-size: 20px;
         line-height: 2.5em;
