@@ -15,6 +15,14 @@ img{
     -moz-user-drag: none;
 }
 
+.flash{
+    position: absolute;
+    width: 20%;
+    top: 2%;
+    right: 1%
+
+}
+
 /* Title and button behavior inpired by Mark Mead's work : https://codepen.io/markmead/pen/wvwjePG */
 
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
