@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>dc.dev | Protéger son code php</title>
-    <link rel="stylesheet" href="phpsecurity.css">
+    <link rel="stylesheet" href="blogstyle.css">
     <link rel="stylesheet" href="../../Bibliothèques/prism.css">
-    <link rel="icon" type="image/png" href="../Images/logo.png">
-    <link rel="preload" href="phpsecurity.css" as="style">
-    <link rel="preload" href="phpsecurity.js" as="script">
+    <link rel="icon" type="image/png" href="../../Images/logo.png">
+    <link rel="preload" href="blogstyle.css" as="style">
+    <link rel="preload" href="blogscript.js" as="script">
 </head>
 <body>
     <header>
@@ -21,9 +21,9 @@
         <div class="container">
             <div class="content">
                 <img class="banner" src="../../Images/phpbanner.png">
-                <h1 class="center">Back-end : Sécuriser son code PhP</h1>
+                <h1 class="center">Back-end : Sécuriser son code php</h1>
                 <hr>
-                <p><br><em>
+                <p class="intro"><br><em>
                     J’ai un souci.
                     <br><br>
                     J’apprends le PHP en ce moment mais parmi tous les sujets liés à ce langage, 
@@ -200,6 +200,7 @@ echo htmlentities($string, ENT_QUOTES);
                     On peut aussi, en plus de la conversion des guillemets en entités html, filtrer certains caractères spéciaux comme vu précédemment avec la fonction preg_match. <br>
                     Pour faciliter l’application de ces filtres, on peut créer des variables $whitelist et $blacklist afin de filtrer d’un côté ce que l’on accepte, et de l’autre ce que l’on refuse.
                 </p>
+                <img class="centerimg" src="../../Images/blacklisted-homer.gif" alt="gif de homer simpson en balise de fermeture se faisant bloquer par un videur">
                 <p>
                     Vu qu’on est jamais trop prudent, autant blacklister le “NULL” ainsi que le “/”, pour pouvoir dormir sur ses deux oreilles. 
                 </p>
@@ -331,5 +332,5 @@ if($film = false){
     <footer>
         <div class="mark"><p>Dorian Canonne | Contact : dorian.canonne@hetic.net</p></div>
     </footer>
-    <script type="text/javascript" src="phpsecurity.js"></script>
+    <script type="text/javascript" src="blogscript.js"></script>
     <script type="text/javascript" src="../../Bibliothèques/prism.js"></script>
