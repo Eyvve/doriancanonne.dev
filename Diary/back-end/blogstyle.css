@@ -150,6 +150,8 @@ main{
 }
 
 .content{
+    position: relative;
+    top: -1.5%;
     background-color: #FFF;
     padding-bottom: 100px;
     padding: 30px;
@@ -344,6 +346,10 @@ footer{
     
     .menu{
         display: block;
+    }
+
+    .content{
+        top: -0.5%;
     }
 
     .navbar{
