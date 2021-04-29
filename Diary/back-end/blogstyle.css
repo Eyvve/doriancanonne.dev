@@ -270,6 +270,10 @@ main{
     color: #FF3366;
 }
 
+.sources{
+    overscroll-behavior: auto;
+}
+
 
 footer{
     z-index: 100000;
