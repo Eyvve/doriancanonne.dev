@@ -91,6 +91,13 @@ ul>.workinprogresslinks{
     width: 80%;
 }
 
+.logo{
+    padding-top: 40px;
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+}
+
 body{
     backdrop-filter: blur(3px);
     height: auto;
