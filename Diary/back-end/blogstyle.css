@@ -271,7 +271,7 @@ main{
 }
 
 .sources{
-    overscroll-behavior: auto;
+    max-width: 100%;
 }
 
 
