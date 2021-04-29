@@ -467,6 +467,11 @@ footer{
         font-size: 28px;
     }
 
+    .sources{
+        max-width: 100%;
+        overflow: hidden;
+    }
+
     .mark{
         height: 50px;
         bottom: -160px;
