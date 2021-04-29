@@ -2,6 +2,7 @@ html{
     background-color: #DED9D4;
     color: #2E4057;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    overflow-x: hidden;
 }
 
 img{
@@ -37,6 +38,16 @@ h1{
     
 }
 
+h3{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 16.5px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
 p{
     color: #2E4057;
     font-size: 18px;
@@ -50,10 +61,34 @@ p{
     /* z-index: 150; */
 }
 
+.workinprogress{
+    top: -150px;
+}
+
+.workinprogresstxt{
+    font-size: 25px;
+    position: relative;
+    top: -200px;
+}
+
+ul>.workinprogresslinks{
+    position: relative;
+    top: -135px;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.8rem;
+}
+
 .centerimg{
     position: relative;
     left: 25%;
     width: 50%;
+}
+
+.centerimg2{
+    position: relative;
+    left: 11%;
+    width: 80%;
 }
 
 body{
@@ -141,8 +176,25 @@ main{
     z-index: 100;
 }
 
+.menucontainer{
+
+}
+
+.card{
+    min-height: 500px;
+
+}
+
 .container{
-    margin-top: 20px;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: auto 900px auto;
+    grid-template-rows: auto;
+    grid-template-areas: " leftspace content . ";
+}
+
+.container1{
+    margin-top: 250px;
     display: grid;
     grid-template-columns: auto 900px auto;
     grid-template-rows: auto;
@@ -165,6 +217,10 @@ main{
 
 .intro{
     text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .encart{

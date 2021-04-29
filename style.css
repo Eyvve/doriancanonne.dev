@@ -106,10 +106,10 @@ background-size: 100%;
 
 .bouton1{
     font-size: 40px;
-    animation: fadeinb1 4s;
-    -moz-animation: fadeinb1 4s;
-    -webkit-animation: fadeinb1 4s;
-    -o-animation: fadeinb1 4s;
+    animation: fadeinb1 2.5s;
+    -moz-animation: fadeinb1 2.5s;
+    -webkit-animation: fadeinb1 2.5s;
+    -o-animation: fadeinb1 2.5s;
 }
 
 .bouton2{
