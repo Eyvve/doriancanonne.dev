@@ -154,7 +154,7 @@ rightarrow.addEventListener("click", function(){
         timelineindicator.classList.remove("horizTranslate1")
         timelineindicator.classList.add("horizTranslate2")
         timelineindicator.style.left = "250px"
-        date.innerHTML = "Avril 2021"
+        date.innerHTML = "Mai 2021"
         projectname.innerHTML = "Citypop Discovery"
         projectlanguages.src = "../Images/MMP_language.svg"
         rightbutton.src = "../Images/Coming_Soon_button.svg"
