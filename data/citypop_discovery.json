@@ -9,6 +9,7 @@
     },
     {
         "product_id" : "20",
+        "image" : "./Assets/fake merch/poster.png",
         "name" : "Poster" ,
         "type" : "Goodie",
         "price" : "50"
