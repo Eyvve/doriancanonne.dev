@@ -11,32 +11,7 @@
         "product_id" : "20",
         "name" : "Poster" ,
         "type" : "Goodie",
-        "variants" : {
-            "var1" : {
-                "product_id" : "21",
-                "image" : "./Assets/fake merch/poster.png",
-                "size" : "S",
-                "price" : 15 
-            },
-            "var2" : {
-                "product_id" : "22",
-                "image" : "./Assets/fake merch/poster.png",
-                "size" : "M",
-                "price" : 25 
-            },
-            "var3" : {
-                "product_id" : "23",
-                "image" : "./Assets/fake merch/poster.png",
-                "size" : "L",
-                "price" : 40
-            },
-            "var4" : {
-                "product_id" : "24",
-                "image" : "./Assets/fake merch/poster.png",
-                "size" : "XL",
-                "price" : 50 
-            }
-        }
+        "price" : "50"
     },
     {
         "product_id" : "30",
