@@ -91,6 +91,8 @@ var description_txt2 = document.querySelector("#description_txt2")
 
 var description_txt3 = document.querySelector("#description_txt3")
 
+var description_txt4 = document.querySelector("#description_txt4")
+
 var img1 = document.querySelector("#img1")
 
 var img2 = document.querySelector("#img2")
@@ -156,9 +158,9 @@ rightarrow.addEventListener("click", function(){
         timelineindicator.style.left = "250px"
         date.innerHTML = "Mai 2021"
         projectname.innerHTML = "Citypop Discovery"
-        projectlanguages.src = "../Images/MMP_language.svg"
-        rightbutton.src = "../Images/Coming_Soon_button.svg"
-        rightbuttonlink.href = ""
+        projectlanguages.src = "../Images/HMG_language.svg"
+        rightbutton.src = "../Images/Visit_button.svg"
+        rightbuttonlink.href = "https://citypop-discovery.netlify.app/"
         ProjectImage.classList.remove("slide1")
         ProjectImage.classList.add("slide2")
         ProjectImage.style.filter = "blur(0px)"
@@ -215,9 +217,9 @@ leftarrow.addEventListener("click", function(){
         timelineindicator.style.left = "250px"
         date.innerHTML = "Avril 2021"
         projectname.innerHTML = "Citypop Discovery"
-        projectlanguages.src = "../Images/MMP_language.svg"
-        rightbutton.src = "../Images/Coming_Soon_button.svg"
-        rightbuttonlink.href = ""
+        projectlanguages.src = "../Images/HMG_language.svg"
+        rightbutton.src = "../Images/Visit_button.svg"
+        rightbuttonlink.href = "https://citypop-discovery.netlify.app/"
         ProjectImage.classList.remove("slide0")
         ProjectImage.classList.add("slide2")
         ProjectImage.style.filter = "blur(0px)"
@@ -241,7 +243,7 @@ rightbutton.addEventListener("mouseover", function(){
         rightbutton.src = "../Images/Visit_button_hover.svg"
     }
     else if(position == 2){
-        rightbutton.src = "../Images/Coming_Soon_button.svg"
+        rightbutton.src = "../Images/Visit_button_hover.svg"
     }
 })
 
@@ -253,7 +255,7 @@ rightbutton.addEventListener("mouseout", function(){
         rightbutton.src = "../Images/Visit_button.svg"
     }
     else if(position == 2){
-        rightbutton.src = "../Images/Coming_Soon_button.svg"
+        rightbutton.src = "../Images/Visit_button_hover.svg"
     }
     
 })
@@ -299,13 +301,13 @@ leftbutton.addEventListener("click", function(){
         description_txt1.style.display = "none"
         description_txt2.style.display = "none"
         description_txt3.style.display = "block"
-        img1.src = ""
-        img2.src = ""
-        img3.src = ""
-        // waiting for screens to show
-        img1.style.display = "none"
-        img2.style.display = "none"
-        img3.style.display = "none"
+        img1.src = "../Images/CPD_S1.png"
+        img2.src = "../Images/CPD_S2.png"
+        img3.src = "../Images/CPD_S3.png"
+        // // waiting for screens to show
+        // img1.style.display = "none"
+        // img2.style.display = "none"
+        // img3.style.display = "none"
     }
     setTimeout(() => {  window.location.href = "#anchordescription"; }, 0);
     
