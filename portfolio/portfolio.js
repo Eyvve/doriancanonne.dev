@@ -286,10 +286,10 @@ rightbutton.addEventListener("mouseout", function(){
         rightbutton.src = "../Images/Visit_button.svg"
     }
     else if(position == 2){
-        rightbutton.src = "../Images/Visit_button_hover.svg"
+        rightbutton.src = "../Images/Visit_button.svg"
     }
     else if(position == 3){
-        rightbutton.src = "../Images/Play_button_hover.svg"
+        rightbutton.src = "../Images/Play_button.svg"
     }
     
 })
