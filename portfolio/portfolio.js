@@ -120,7 +120,7 @@ rightarrow.addEventListener("mouseout", function(){
 rightarrow.addEventListener("click", function(){
     console.log("go right")
     position = position + 1
-    if(position == 3){
+    if(position == 4){
         position = 0
     }
     if(position == 0){
@@ -133,7 +133,7 @@ rightarrow.addEventListener("click", function(){
         projectlanguages.src = "../Images/prince_demon_language.svg"
         rightbutton.src = "../Images/Play_button.svg"
         rightbuttonlink.href = "https://github.com/Eyvve/Le-prince-demon-DEMO/releases/tag/DEMO-1.4"
-        ProjectImage.classList.remove("slide2")
+        ProjectImage.classList.remove("slide3")
         ProjectImage.classList.add("slide0")
         ProjectImage.style.filter = "blur(0px)"
     }
@@ -165,6 +165,20 @@ rightarrow.addEventListener("click", function(){
         ProjectImage.classList.add("slide2")
         ProjectImage.style.filter = "blur(0px)"
     }
+    else if(position == 3){
+        date.innerHTML = ""
+        timelineindicator.classList.remove("horizTranslate2")
+        timelineindicator.classList.add("horizTranslate3")
+        timelineindicator.style.left = "275px"
+        date.innerHTML = "Mai 2021"
+        projectname.innerHTML = "Everbright's Contenders"
+        projectlanguages.src = "../Images/EBC_language.svg"
+        rightbutton.src = "../Images/Play_button.svg"
+        rightbuttonlink.href = "https://github.com/Eyvve/Everbright_Contenders-1"
+        ProjectImage.classList.remove("slide2")
+        ProjectImage.classList.add("slide3")
+        ProjectImage.style.filter = "blur(0px)"
+    }
     console.log(position)
 })
 
@@ -180,7 +194,7 @@ leftarrow.addEventListener("click", function(){
     console.log("go left")
     position = position - 1
     if(position == -1){
-        position = 2
+        position = 3
     }
     if(position == 0){
         date.innerHTML = ""
@@ -220,8 +234,22 @@ leftarrow.addEventListener("click", function(){
         projectlanguages.src = "../Images/HMG_language.svg"
         rightbutton.src = "../Images/Visit_button.svg"
         rightbuttonlink.href = "https://citypop-discovery.netlify.app/"
-        ProjectImage.classList.remove("slide0")
+        ProjectImage.classList.remove("slide3")
         ProjectImage.classList.add("slide2")
+        ProjectImage.style.filter = "blur(0px)"
+    }
+    else if(position == 3){
+        date.innerHTML = ""
+        timelineindicator.classList.remove("horizTranslate2")
+        timelineindicator.classList.add("horizTranslate3")
+        timelineindicator.style.left = "275px"
+        date.innerHTML = "Mai 2021"
+        projectname.innerHTML = "Everbright's Contenders"
+        projectlanguages.src = "../Images/EBC_language.svg"
+        rightbutton.src = "../Images/Play_button.svg"
+        rightbuttonlink.href = "https://github.com/Eyvve/Everbright_Contenders-1"
+        ProjectImage.classList.remove("slide0")
+        ProjectImage.classList.add("slide3")
         ProjectImage.style.filter = "blur(0px)"
     }
     console.log(position)
@@ -245,6 +273,9 @@ rightbutton.addEventListener("mouseover", function(){
     else if(position == 2){
         rightbutton.src = "../Images/Visit_button_hover.svg"
     }
+    else if(position == 3){
+        rightbutton.src = "../Images/Play_button_hover.svg"
+    }
 })
 
 rightbutton.addEventListener("mouseout", function(){
@@ -256,6 +287,9 @@ rightbutton.addEventListener("mouseout", function(){
     }
     else if(position == 2){
         rightbutton.src = "../Images/Visit_button_hover.svg"
+    }
+    else if(position == 3){
+        rightbutton.src = "../Images/Play_button_hover.svg"
     }
     
 })
@@ -283,6 +317,7 @@ leftbutton.addEventListener("click", function(){
         description_txt1.style.display = "block"
         description_txt2.style.display = "none"
         description_txt3.style.display = "none"
+        description_txt4.style.display = "none"
         img1.src = "../Images/LPD_S1.png"
         img2.src = "../Images/LPD_S2.png"
         img3.src = "../Images/LPD_S3.png"
@@ -292,6 +327,7 @@ leftbutton.addEventListener("click", function(){
         description_txt1.style.display = "none"
         description_txt2.style.display = "block"
         description_txt3.style.display = "none"
+        description_txt4.style.display = "none"
         img1.src = "../Images/HMG_S1.png"
         img2.src = "../Images/HMG_S2.png"
         img3.src = "../Images/HMG_S3.png"
@@ -301,13 +337,20 @@ leftbutton.addEventListener("click", function(){
         description_txt1.style.display = "none"
         description_txt2.style.display = "none"
         description_txt3.style.display = "block"
+        description_txt4.style.display = "none"
         img1.src = "../Images/CPD_S1.png"
         img2.src = "../Images/CPD_S2.png"
         img3.src = "../Images/CPD_S3.png"
-        // // waiting for screens to show
-        // img1.style.display = "none"
-        // img2.style.display = "none"
-        // img3.style.display = "none"
+    }
+    if(position == 3){
+        description_logo.src = "../Images/EBC.svg"
+        description_txt1.style.display = "none"
+        description_txt2.style.display = "none"
+        description_txt3.style.display = "none"
+        description_txt4.style.display = "block"
+        img1.src = "../Images/EBC_S1.png"
+        img2.src = "../Images/EBC_S2.png"
+        img3.src = "../Images/EBC_S3.png"
     }
     setTimeout(() => {  window.location.href = "#anchordescription"; }, 0);
     
